@@ -1,5 +1,5 @@
-Templates and tools for creating lecture slides
-===============================================
+GRASS GIS as open source innovation platform
+============================================
 
 Getting the manual
 ------------------

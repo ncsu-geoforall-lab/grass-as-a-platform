@@ -32,12 +32,12 @@
     <h3>Maps go digital with GRASS</h3>
 <p>
 Year 1987: Let William Shatner do the introduction
-<p>
+<br>
+<video width="650" height="500" controls loop autoplay> <source src="img/grassmovie_1min.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+<p><small>see full 15 min video here <a href="https://www.youtube.com/embed/U3Hf0qI4JLc">https://www.youtube.com/embed/U3Hf0qI4JLc</a></small>
 <!-- FULL Video 
-    <iframe width="650" height="500" src="https://www.youtube.com/embed/U3Hf0qI4JLc" frameborder="0"  webkitallowfullscreen mozallow fullscreen allowfullscreen></iframe>
--->
-<video width="650" height="500" controls loop autoplay> <source src="img/grassmovie1min.mp4" type="video/mp4">
-  Your browser does not support the video tag.
+    <iframe width="650" height="500" src="https://www.youtube.com/embed/U3Hf0qI4JLc" frameborder="0"  webkitallowfullscreen mozallow fullscreen allowfullscreen></iframe> -->
 </section>
 
 <section>
@@ -66,39 +66,53 @@ Year 1987: Let William Shatner do the introduction
 <p>
     <ul>
     <li>First worldwide map of watersheds?</li>
-    <li>Unique least cost path algorithm implemented in 1991 
-    <li>Updated for massive data sets - proving its value with SRTM and lidar DEMs </li>
+    <li>Unique least cost path algorithm implemented in 1991: no depression filling needed 
+    <li>Updated for massive data sets (SRTM, lidar DEMs) </li>
 </ul>
-<p>TODO Panama? Lidar? cite Chuck, metz
-<p><img height="200" src="img/motivation_composits.png">
+<p><img height="150" src="img/motivation_composits.png">
+<p><small>Metz M., Mitasova H., and Harmon R.S., 2011, Efficient extraction of drainage networks from massive, radar-based elevation models with least cost path search, Hydrology and Earth System Sciences, 15, 667-678</small>
 </section>
 
 <section>
     <h3>Multivariate splines with analysis </h3>
 <p>
-    <ul>
-    <li>w = a + sumR^d(r), where d=2,3,4, r=(x_i), i=1,2,3
-    <li>simulatenous analysis of geometry: gradients, curvatures</li>
+    2D, 3D and 4D interpolation with tuneable tension and smoothing </li>
+<p><img width="55%" src="img/tension.gif">
+<!-- &nbsp;<img width="55%" src="img/lidar_tension_curv.gif">-->
+<p><small>
+Mitasova, H., L. Mitas, 1993, Interpolation by regularized spline with tension : I. Theory and implementation. [pdf] Mathematical Geology 25, p. 641-655.</small></p>
+</section>
+
+<section>
+    <h3>Multivariate splines with analysis </h3>
+<p>
+<ul>
+    <li>simulatenous analysis: gradients, curvatures</li>
     <li>tuneable level of detail, geometry preserving smoothing </li>
 </ul>
-<p><img width="35%" src="img/tension.gif">
- &nbsp;<img width="55%" src="img/lidar_tension_curv.gif">
-<p>CITE
+<p>
+<img width="75%" src="img/lidar_tension_curv.gif">
+<p><small>H.Mitasova, H., Mitas, L. and Harmon, R.S., 2005, Simultaneous spline interpolation and topographic analysis for lidar elevation data: methods for Open source GIS, IEEE GRSL 2(4), pp. 375- 379.</small>
 </section>
 
 <section>
     <h3>Dynamic volume modeling</h3>
-    Groundwater pollution plume from 10 years of well monitoring data
+    Groundwater pollution plume interpolated from 10 years of well monitoring data
+    using 4D spline function
 <p>
     <img width=500 src="img/well456.gif">
-<p>CITE
+<p><small>Mitasova, H., L. Mitas, B.M. Brown, D.P. Gerdes, I. Kosinovsky, 1995, Modeling spatially and temporally distributed phenomena: New methods and tools for GRASS GIS. IJGIS, 9 (4), 443-446.</small>
 </section>
 
 <section>
     <h3>Dynamic Water and Sediment flow</h3>
+<!--    
     <img width="10%" src="img/nc1_f.gif">  
-<!--    &nbsp; &nbsp; &nbsp;-->
-    <img width="35%" src="img/water.gif"> <img width="35%" src="img/lsfac.gif">
+&nbsp; &nbsp; &nbsp;-->
+    <img width="42%" src="img/water.gif"> 
+&nbsp; &nbsp;
+    <img width="42%" src="img/lsfac.gif">
+<p><small>Mitas L., Brown W. M., Mitasova H., 1997, Role of dynamic cartography in simulations of landscape processes based on multi-variate fields. Computers and Geosciences, Vol. 23, No. 4, pp. 437-446</small>
  </section>
 
 <section>
@@ -109,35 +123,37 @@ Year 1987: Let William Shatner do the introduction
     <img width="45%" src="img/fanimwalk.gif"> 
      &nbsp; &nbsp;
     <img width="45%" src="img/fanimhhcolp.gif">
+<p><small>Mitas, L., Mitasova, H., 1998, Distributed erosion modeling for effective erosion prevention. Water Resources Research 34(3), pp. 505-516</small>
 </section>
 
 <section>
-    <h2>GRASS 7 examples</h2>
+    <h2>GRASS 7 innovations</h2>
 </section>
 
 <section>
-    <h3 style="margin-bottom: 1em">Space-Time Framework: Analysis </h3>
+    <h3 style="margin-bottom: 1em">Space-Time Framework </h3>
 <p>
 <ul>
 <li>Space-time 2D,3D raster and vector datatypes
 <li>Time series datasets managed in temporal database
 <li>New modules: query, aggregation, conversion, statistics, gap filling
 </ul>
-<p><font size=-1> Gebbert, S., Pebesma, E., 2014. TGRASS: A temporal GIS for field based environmental modeling.
-Environmental Modelling & Software 53, 1-12. </font>
+<p><small> Gebbert, S., Pebesma, E., 2014. TGRASS: A temporal GIS for field based environmental modeling.
+Environmental Modelling & Software 53, 1-12. </small>
 </section>
 
 <section>
     <h3>MODIS land surface temperature</h3>
 <p>
 <ul>
-<li>14 years of 4-times per day data (14x1440 maps) for entire Europe at 250m resolution
-<li>advanced statistical methods used to fill no-data areas and enhance resolution
-<li>multivariate regression including elevation, solar angle, annual precipitation
+<li>14 years of 4/day (20K) maps, entire Europe, 250m res
+<li>advanced statistics to fill no-data and enhance resolution,
+multivariate regression includes elevation, solar angle, precipitation
+</small>
 </ul>
 <p>
     <img width="45%" src="img/MODIS_LST.jpg"> <img width="40%" src="img/MODIS_USA.jpg">
-<p> EuroLST: http://gis.cri.fmach.it/eurolst/, Metz, Rocchini, Neteler, 2014: Rem Sens, 6(5): 3822-3840
+<p><small> EuroLST: http://gis.cri.fmach.it/eurolst/, Metz, Rocchini, Neteler, 2014: Rem Sens, 6(5): 3822-3840</small>
 </section>
 
 <section>
@@ -159,9 +175,9 @@ Environmental Modelling & Software 53, 1-12. </font>
 
 <section>
     <h3>DEM time series visualization:</h3>
-    <p>Jockey's Ridge migration 1974 - 2012</p>
+    <p>Jockey's Ridge migration 1974 - 2014, lidar time series</p>
     <img height="350" src="img/jrseries.png">
-    <img width="50%" src="img/animation_without_contour.gif">
+    <img width="55%" src="img/animation_without_contour.gif">
 </section>
 
 <section >
@@ -172,34 +188,46 @@ Environmental Modelling & Software 53, 1-12. </font>
 <img height="400" src="img/jr20/animation.gif">
 </section>
 
+<!--
 <section>
     <h3>Interactive 270 degree visualization </h3>
     Jockey's Ridge visualization in the Hunt Library teaching and visualization laboratory
 <p>
     <img height="400" src="img/JR_Huntl.jpg">
-<!--    <img height="450" src="img/JR_Huntlib_HM1.jpg">-->
+   <img height="450" src="img/JR_Huntlib_HM1.jpg">
 </section>
+-->
 
 <section>
-   <h3>Space time cube for topography</h3>
+   <h3>Space time cube for TLS series</h3>
 Stream bank erosion from terrestrial lidar
+<p>
+    <img height="200" src="img/Fifx_DEMs1stlast.png">
+    <img height="220" src="img/Fig8isosurf_change.png">
+<p><small>Starek, M.J., Mitasova H., Wegmann, K, Lyons, N., 2013, 
+Space-Time Cube Representation of Stream Bank Evolution Mapped by 
+Terrestrial Laser Scanning, IEEE Geoscience and Remote Sensing Letters 10(6), p. 1369-1373 </small>
 </section>
 
 <section>
-    <h3>UAS DSM and water flow modeling  </h3>
+    <h3>Mapping with sUAS  </h3>
+<p>
+Trimble UX5 UAS flight plan analysis
+<p>
+    <img height=480 src="img/uav_flight_plan.jpg">
+</section>
+
+<section>
+    <h3>Surface water flow modeling  </h3>
 <p>
 <ul>
-<li>flight analysis
-<li>lidar + UAS fusion
-<p><li>DSM of tilled fields at NCSU Lake Wheeler experimental farms
-<p><li>Simulated surface water depth captures flow redirection by tillage
+<li>SfM in Agisoft or OpenDroneMap > point cloud
+<li>DSM interpolation and path smapling - based surface runoff modeling in GRASS GIS
 </ul>
 <p>
-<br>
-    <img height=480 src="img/ngat2_dem02m_3d.jpg">
+    <img width="45%" src="img/agisoft_jan.gif">
     &nbsp; &nbsp; &nbsp; &nbsp;
-    <img height=400 src="img/ngat2_simweflowdepth_3dsm.jpg">
-<!--    <img height=200 src="img/diffmap_uav2_lidg.png">-->
+    <img width="45%" src="img/agisoft_june.gif">
 </section>
 
 <!--
@@ -214,20 +242,19 @@ Stream bank erosion from terrestrial lidar
 -->
 
 <section>
-    <h3>On-line geospatial analytics:</h3>
-    <h4>Geomorphons</h4>
+    <h3>Geomorphons</h3>
 <ul>
 <li>Basic landforms extracted for the entire US 
 <li>Interactive search of similar landuse patterns
-<li>Spatial Informatics Laboratory, University of Cincinnati 
-<li>http://sil.uc.edu/</p>
+<li>On-line geospatial analytics: http://sil.uc.edu/ 
+<li>Spatial Informatics Laboratory, University of Cincinnati
 </ul>
+<p>
 <img width="85%" src="img/us_geom_26642.jpg">
 </section>
 
-
 <section>
-    <h3>Tangible landscape</h3>
+    <h3>Tangible Landscape</h3>
 <p>
 link to webinar and book
 <p>
@@ -251,13 +278,14 @@ link to webinar and book
 <section>
 <h3>Tangible Landscape: real-time coupling with GIS</h3>
 <iframe data-autoplay width="853" height="480" src="https://www.youtube.com/embed/Cd3cCQTGer4?rel=0&amp;showinfo=0&amp;loop=1&amp;playlist=Cd3cCQTGer4" frameborder="0" allowfullscreen></iframe>
-<p>With Tangible Landscape you can hold a GIS in your hands - feeling the shape of the earth, sculpting its topography, and directing the flow of water.</p>
+<img class="stretch" src="img/system_schema.png">
+<p>Tangible Landscape couples a digital and a physical model through a continuous cycle of 3D scanning, geospatial modeling, and projection</p>
 </section>
 
 <section>
-<h3>How it works</h3>
-<img class="stretch" src="img/system_schema.png">
-<p>Tangible Landscape couples a digital and a physical model through a continuous cycle of 3D scanning, geospatial modeling, and projection</p>
+<h3>Interfaces</h3>
+TUI, GUI, CLI
+<img class="stretch" src="img/software-schema.png">
 </section>
 
 <section>
@@ -308,6 +336,12 @@ Dam breach, overland flow (several modules)
 </section>
 
 <section>
+<h3>Resources for inovators</h3>
+<p>
+workshops - pyGRASS, temporal framework, tangible landscape
+</section>
+
+<section>
     <h3>NCSU Geoforall lab</h3>
     <h4>geospatial.ncsu.edu/osgeorel/</h4>
 <p>
@@ -325,4 +359,15 @@ Dam breach, overland flow (several modules)
     <h4>geospatial.ncsu.edu/osgeorel/</h4>
 <p>map 2011 and now
 <p>challenge for open source cartography - we need a map that fulfills cartographic standards
+</section>
+
+<section>
+<h3>Resources</h3>
+<ul>
+<li>Book: <a href="http://www.springer.com/us/book/9783319257730">
+<em>Tangible Modeling with Open Source GIS</em></a></li>
+<li><em><a href="http://www.mdpi.com/2220-9964/4/2/942/pdf">
+        Integrating Free and Open Source Solutions into Geospatial Science Education.</a></em>
+        Petras, V., Petrasova, A., Harmon, B., Meentemeyer, R.K., Mitasova, H.
+         ISPRS IJGI. 2015.</li> 
 </section>

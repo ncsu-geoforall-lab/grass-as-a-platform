@@ -14,21 +14,6 @@
 </section>
 
 <section>
-<h3>myoutline</h3>
-<ul>
-<li>80s video: GRASS for land management
-<li>least cost path flowrouting 1991 >> SRTM, lidar
-<li>MD interp, dynamic visualization 1993 >> 
-<li>duality of particles and fields 2000
-<li>geomorphons and landex
-<li>space time cube
-<li>Tangible interface
-<li>geoforall
-<li>add year, GRASS version, paper, autocarto as citation footnote
-</ul>
-</section>
-
-<section>
     <h3>Maps go digital with GRASS</h3>
 <p>
 Year 1987: Let William Shatner do the introduction
@@ -45,7 +30,8 @@ Year 1987: Let William Shatner do the introduction
     <h4 style="margin-bottom: 1em">grass.osgeo.org</h4>
 <p>
 <ul>
-<p> <li>general purpose GIS with wxPython GUI</li>
+<p> <li>general purpose GIS with wxPython GUI and CLI</li>
+<p> <li>python shell and pyGRASS</li>
 <p> <li>backend processing for QGIS, R statistics, WebGIS  </li>
 <p> <li>powerful 2D/3D raster, imagery and vector processing</li>
 <p> <li>single integrated software with 30 years of development </li>
@@ -54,6 +40,7 @@ Year 1987: Let William Shatner do the introduction
 
 <section>
 <h3>GRASS GIS and innovation</h3>
+<p><img height="80" src="img/grasslogo_banner.png">
 <ul>
 <p><li>GRASS has long history - known as a reliable geospatial number cruncher (Neteler 2014)
 <p><li>Developed as component of research projects - innovation through research
@@ -62,37 +49,40 @@ Year 1987: Let William Shatner do the introduction
 </section>
 
 <section>
-    <h3>Watersheds </h3>
+    <h3>Watersheds and stream extraction</h3>
 <p>
     <ul>
-    <li>First worldwide map of watersheds?</li>
-    <li>Unique least cost path algorithm implemented in 1991: no depression filling needed 
+    <li>First worldwide map of watersheds derived from a global DEM</li>
+    <li>Unique least cost path algorithm, no depression filling needed: 
+        <b>r.watershed</b>
     <li>Updated for massive data sets (SRTM, lidar DEMs) </li>
 </ul>
-<p><img height="150" src="img/motivation_composits.png">
-<p><small>Metz M., Mitasova H., and Harmon R.S., 2011, Efficient extraction of drainage networks from massive, radar-based elevation models with least cost path search, Hydrology and Earth System Sciences, 15, 667-678</small>
-</section>
-
-<section>
-    <h3>Multivariate splines with analysis </h3>
-<p>
-    2D, 3D and 4D interpolation with tuneable tension and smoothing </li>
-<p><img width="55%" src="img/tension.gif">
-<!-- &nbsp;<img width="55%" src="img/lidar_tension_curv.gif">-->
 <p><small>
-Mitasova, H., L. Mitas, 1993, Interpolation by regularized spline with tension : I. Theory and implementation. [pdf] Mathematical Geology 25, p. 641-655.</small></p>
+Ehlschlaeger C., 1989, Using the AT Search Algorithm to Develop Hydrologic Models from Digital Elevation Data, 
+Proc IGIS Symposium '89, 275-281.
+<br>
+Metz M., Mitasova H., and Harmon R.S., 2011, Efficient extraction of drainage networks from massive, radar-based elevation models with least cost path search, Hydrology and Earth System Sciences, 15, 667-678</small>
 </section>
 
 <section>
-    <h3>Multivariate splines with analysis </h3>
+    <h3>Multivariate splines </h3>
+<p>
+    2D, 3D and 4D interpolation with tuneable tension </li>
+<p><img width="50%" src="img/tension.gif">
+<p><small>
+Mitasova, H., L. Mitas, 1993, Interpolation by regularized spline with tension : I. Theory and implementation. Mathematical Geology 25, 641-655.</small></p>
+</section>
+
+<section>
+    <h3>Splines with geometry analysis </h3>
 <p>
 <ul>
-    <li>simulatenous analysis: gradients, curvatures</li>
+    <li>simulatenous topo analysis: gradients, curvatures</li>
     <li>tuneable level of detail, geometry preserving smoothing </li>
 </ul>
 <p>
-<img width="75%" src="img/lidar_tension_curv.gif">
-<p><small>H.Mitasova, H., Mitas, L. and Harmon, R.S., 2005, Simultaneous spline interpolation and topographic analysis for lidar elevation data: methods for Open source GIS, IEEE GRSL 2(4), pp. 375- 379.</small>
+<img width="70%" src="img/lidar_tension_curv.gif">
+<p><small>Mitasova, H., Mitas, L., Harmon, R.S., 2005, Simultaneous spline interpolation and topographic analysis for lidar elevation data: methods for Open source GIS, IEEE GRSL 2(4), 375-379.</small>
 </section>
 
 <section>
@@ -101,18 +91,25 @@ Mitasova, H., L. Mitas, 1993, Interpolation by regularized spline with tension :
     using 4D spline function
 <p>
     <img width=500 src="img/well456.gif">
-<p><small>Mitasova, H., L. Mitas, B.M. Brown, D.P. Gerdes, I. Kosinovsky, 1995, Modeling spatially and temporally distributed phenomena: New methods and tools for GRASS GIS. IJGIS, 9 (4), 443-446.</small>
+<p><small>
+WM Brown, M Astley, T Baker, H Mitasova, 1995, GRASS as an integrated GIS and visualization system for spatio-temporal modeling AUTOCARTO, 89-99
+</small>
 </section>
 
 <section>
-    <h3>Dynamic Water and Sediment flow</h3>
+    <h3>Dynamic water and sediment flow</h3>
+Flow accumulation and sediment transport capacity visualized as dynamic surfaces
+<p>
 <!--    
     <img width="10%" src="img/nc1_f.gif">  
 &nbsp; &nbsp; &nbsp;-->
     <img width="42%" src="img/water.gif"> 
 &nbsp; &nbsp;
     <img width="42%" src="img/lsfac.gif">
-<p><small>Mitas L., Brown W. M., Mitasova H., 1997, Role of dynamic cartography in simulations of landscape processes based on multi-variate fields. Computers and Geosciences, Vol. 23, No. 4, pp. 437-446</small>
+<p><small>
+Mitasova, H., L. Mitas, B.M. Brown, D.P. Gerdes, I. Kosinovsky, 1995, Modeling spatially and temporally distributed phenomena: New methods and tools for GRASS GIS. IJGIS, 9 (4), 443-446.</small>
+<!--<br>
+Mitas L., Brown W. M., Mitasova H., 1997, Role of dynamic cartography in simulations of landscape processes based on multi-variate fields. Computers and Geosciences, Vol. 23, No. 4, pp. 437-446 -->
  </section>
 
 <section>
@@ -152,32 +149,16 @@ multivariate regression includes elevation, solar angle, precipitation
 </small>
 </ul>
 <p>
-    <img width="45%" src="img/MODIS_LST.jpg"> <img width="40%" src="img/MODIS_USA.jpg">
+    <img width="48%" src="img/MODIS_LST.jpg"> <img width="44%" src="img/MODIS_USA.jpg">
 <p><small> EuroLST: http://gis.cri.fmach.it/eurolst/, Metz, Rocchini, Neteler, 2014: Rem Sens, 6(5): 3822-3840</small>
 </section>
 
-<section>
-<h3>Lidar time series</h3>
-<p>
-<ul>
-<li>core, envelope, homes lost and built
-</ul>
-</section>
-
-<section>
-<h3>LCP for linear features</h3>
-<p>
-<ul>
-<li>dune ridge and toe 
-<li>channels in a cave
-</ul>
-</section>
 
 <section>
     <h3>DEM time series visualization:</h3>
     <p>Jockey's Ridge migration 1974 - 2014, lidar time series</p>
     <img height="350" src="img/jrseries.png">
-    <img width="55%" src="img/animation_without_contour.gif">
+    <img width="60%" src="img/animation_without_contour.gif">
 </section>
 
 <section >
@@ -186,6 +167,14 @@ multivariate regression includes elevation, solar angle, precipitation
   <img height="400" src="img/jr16/animation.gif">
 <!--<img src="img/jr18/animation.gif"> -->
 <img height="400" src="img/jr20/animation.gif">
+</section>
+
+<section>
+<h3>Lidar time series analysis</h3>
+<p>
+<ul>
+<li>core, envelope, homes lost and built
+</ul>
 </section>
 
 <!--
@@ -202,8 +191,8 @@ multivariate regression includes elevation, solar angle, precipitation
    <h3>Space time cube for TLS series</h3>
 Stream bank erosion from terrestrial lidar
 <p>
-    <img height="200" src="img/Fifx_DEMs1stlast.png">
-    <img height="220" src="img/Fig8isosurf_change.png">
+    <img height="180" src="img/Fifx_DEMs1stlast.png">
+    <img height="200" src="img/Fig8isosurf_change.png">
 <p><small>Starek, M.J., Mitasova H., Wegmann, K, Lyons, N., 2013, 
 Space-Time Cube Representation of Stream Bank Evolution Mapped by 
 Terrestrial Laser Scanning, IEEE Geoscience and Remote Sensing Letters 10(6), p. 1369-1373 </small>
@@ -222,7 +211,7 @@ Trimble UX5 UAS flight plan analysis
 <p>
 <ul>
 <li>SfM in Agisoft or OpenDroneMap > point cloud
-<li>DSM interpolation and path smapling - based surface runoff modeling in GRASS GIS
+<li>DSM interpolation and path sampling-based surface runoff modeling in GRASS GIS
 </ul>
 <p>
     <img width="45%" src="img/agisoft_jan.gif">
@@ -256,41 +245,45 @@ Trimble UX5 UAS flight plan analysis
 <section>
     <h3>Tangible Landscape</h3>
 <p>
-link to webinar and book
+Tangible user interface for GRASS GIS
 <p>
     <img height="200" src="img/tanland_composit.png">
+<p>
+Book: Petrasova, A., Harmon, B., Petras, V., Mitasova, H., 2015, <a href="http://www.springer.com/us/book/9783319257730">
+<em>Tangible Modeling with Open Source GIS,</em></a>
+Springer International Publishing, 135 p.
 </section>
 
 <section>
 <h3>Why Tangible Interfaces for GIS?</h3>
 <ul>
-    <li>Interaction through mouse, keyboard and display can be tedious</li>
+    <li>Interaction through mouse and display can be tedious</li>
     <li>Manipulating 3D computer models requires specialized software and training, restricts creativity</li>
     <li>Collaboration is limited as typically only one user at a time can navigate and modify models. </li>
 </ul>
-<img height="200px" src="img/collaboration_computer.JPG">
-<img height="200px" src="img/art_rhino.jpg">
+<img height="220px" src="img/collaboration_computer.JPG">
+<img height="220px" src="img/art_rhino.jpg">
 <!-- </br></br></br> -->
 <!-- <h5>Tangible Landscape is designed to make scientific data,
    models, and simulations exploratory, engaging, and fun</h5> -->
 </section>
 
 <section>
-<h3>Tangible Landscape: real-time coupling with GIS</h3>
-<iframe data-autoplay width="853" height="480" src="https://www.youtube.com/embed/Cd3cCQTGer4?rel=0&amp;showinfo=0&amp;loop=1&amp;playlist=Cd3cCQTGer4" frameborder="0" allowfullscreen></iframe>
-<img class="stretch" src="img/system_schema.png">
+<h3>How does it work?</h3>
+<iframe data-autoplay width="50%" height="300" src="https://www.youtube.com/embed/Cd3cCQTGer4?rel=0&amp;showinfo=0&amp;loop=1&amp;playlist=Cd3cCQTGer4" frameborder="0" allowfullscreen></iframe>
+<img height=300 src="img/system_schema.png">
 <p>Tangible Landscape couples a digital and a physical model through a continuous cycle of 3D scanning, geospatial modeling, and projection</p>
-</section>
-
-<section>
-<h3>Interfaces</h3>
-TUI, GUI, CLI
-<img class="stretch" src="img/software-schema.png">
 </section>
 
 <section>
 <h3>Software</h3>
 <img class="stretch" src="img/software-schema.png">
+</section>
+
+<section>
+<h3>User Interfaces</h3>
+Tangible &nbsp; &nbsp; &nbsp;  Graphical  &nbsp; &nbsp; &nbsp; Command Line
+<img class="stretch" src="img/TUI_GUI_CLI_horizontal.jpg">
 </section>
 
 <section>

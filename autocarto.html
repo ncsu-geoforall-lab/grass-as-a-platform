@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+<!-- This is a generated file. Do not edit. -->
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Template for lecture slides</title>
+
+        <meta name="description" content="Template for lecture slides of NCSU OSGeoREL courses">
+        <meta name="author" content="Vaclav Petras">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- For chalkboard plugin -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <style>
+        body {
+        /*background-color: #FFF !important;*/
+        /*
+          background-image: url("pictures/elevation-nagshead.gif");
+          background-repeat: no-repeat;
+          background-position: left bottom;*/
+        }
+        .reveal section img {
+            background: transparent;
+            border: 0;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+        }
+        /* for standalone frame */
+        /*
+        iframe {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        */
+        /* display: inline; background-color: #002B36; padding: 0px; margin: 0px */
+        .rounded-corners {
+            border: 0px solid black;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -khtml-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+        a {
+            color: #060 !important;
+        }
+        a:hover {
+            color: #060 !important;
+            text-decoration: underline !important;
+        }
+        h1, h2, h3, h4, h5 {
+            text-transform: none !important;
+            /* word-break: keep-all; text-transform: none; font-size: 200%; line-height: 110%; */
+            color: #060 !important;
+            /* color: #444 !important; */ /* grey from the wab page */
+            font-weight: bold !important;
+            -webkit-hyphens: none !important;
+            -moz-hyphens: none !important;
+            -ms-hyphens: none !important;
+            hyphens: none !important;
+            line-height: 110% !important;
+        }
+        .reveal .progress span {
+            background-color: #060 !important;
+        }
+        /* predefined element positioning */
+        .top {
+            /*position: relative;*/
+            top: 5%;
+            height: 45%; /* is the height even needed? */
+        }
+        .bottom {
+            height: 45%;
+        }
+        .ne {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            height: 45%;
+            width: 45%;
+        }
+        .nw {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            height: 45%;
+            width: 45%;
+        }
+        .se {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            height: 45%;
+            width: 45%;
+        }
+        .sw {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            height: 45%;
+            width: 45%;
+        }
+
+        /* classes for sections with predefined elements */
+        /* using !important because, reveal styles are applied afterwards  */
+        .right, .textimg > img, .textimg > video, .textimg > iframe, .imgtext > p, .imgtext > ul, .imgtext > ol, .imgtext > div {
+            float: right;
+            text-align: left;
+            max-width: 47% !important;
+        }
+        .left, .imgtext > img, .imgtext > video, imgtext > iframe, .textimg > p, .textimg > ul, .textimg > ol, .textimg > div {
+            float: left;
+            text-align: left;
+            max-width: 47% !important;
+        }
+        li > ul, li > ol {
+            font-size: 85% !important;
+            line-height: 110% !important;
+        }
+        .small {
+            font-size: smaller !important;
+            color: gray;
+            margin: 0.1em !important;
+        }
+        .credit {
+            font-size: small !important;
+            color: gray;
+            margin: 0.1em !important;
+        }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+<section>
+    <h3>GRASS GIS as an open source innovation platform:</h2>
+    <h4>from dynamic visualizations to collaborative tangible modeling</h3>
+    <p style="margin-top: 0.5em">
+        Helena Mitasova, Anna Petrasova, Vaclav Petras, and Brandan Harmon</p>
+    <p class="title-foot">
+        <a href="http://www.ncsu.edu/" title="North Carolina State University">NCSU</a>
+        <a href="http://geospatial.ncsu.edu/osgeorel/" title="NCSU GeoForAll Lab">GeoForAll Lab</a>
+        at
+        <a href="http://geospatial.ncsu.edu/" title="Center for Geospatial Analytics">Center for Geospatial Analytics</a>
+        <br>
+    </p>
+    <p>September 14-16, 2016</p>
+</section>
+
+<section>
+    <h3>Maps go digital with GRASS</h3>
+<p>
+Year 1987: Let William Shatner do the introduction
+<br>
+<video width="650" height="500" controls loop autoplay> <source src="img/grassmovie_1min.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+<p><small>see full 15 min video here <a href="https://www.youtube.com/embed/U3Hf0qI4JLc">https://www.youtube.com/embed/U3Hf0qI4JLc</a></small>
+<!-- FULL Video 
+    <iframe width="650" height="500" src="https://www.youtube.com/embed/U3Hf0qI4JLc" frameborder="0"  webkitallowfullscreen mozallow fullscreen allowfullscreen></iframe> -->
+</section>
+
+<section>
+    <h3>GRASS GIS for geospatial research </h3>
+    <h4 style="margin-bottom: 1em">grass.osgeo.org</h4>
+<p>
+<ul>
+<p> <li>general purpose GIS with wxPython GUI and CLI</li>
+<p> <li>python shell and pyGRASS</li>
+<p> <li>backend processing for QGIS, R statistics, WebGIS  </li>
+<p> <li>powerful 2D/3D raster, imagery and vector processing</li>
+<p> <li>single integrated software with 30 years of development </li>
+</ul>
+</section>
+
+<section>
+<h3>GRASS GIS and innovation</h3>
+<p><img height="80" src="img/grasslogo_banner.png">
+<ul>
+<li>GRASS has long history - known as a reliable geospatial number cruncher (Neteler 2014)
+<p><li>Developed as component of research projects - innovation through research
+<p><li>Many historically innovative tools serve today: our examples are just a small subset
+</ul>
+</section>
+
+<section>
+    <h3>Watersheds and stream extraction</h3>
+<p>
+    <ul>
+<p>    <li>First worldwide map of watersheds derived from a global DEM</li>
+<p>    <li>Unique least cost path algorithm, no depression filling needed: 
+        <b>r.watershed</b>
+<p>    <li>Updated for massive data sets (SRTM, lidar DEMs) </li>
+</ul>
+<p><small>
+Ehlschlaeger C., 1989, Using the AT Search Algorithm to Develop Hydrologic Models from Digital Elevation Data, 
+Proc IGIS Symposium '89, 275-281.
+<br>
+Metz M., Mitasova H., and Harmon R.S., 2011, Efficient extraction of drainage networks from massive, radar-based elevation models with least cost path search, Hydrology and Earth System Sciences, 15, 667-678</small>
+</section>
+
+<section>
+    <h3>Multivariate splines </h3>
+<p>
+    2D, 3D and 4D interpolation with tuneable tension </li>
+<p><img width="50%" src="img/tension.gif">
+<p><small>
+Mitasova, H., L. Mitas, 1993, Interpolation by regularized spline with tension : I. Theory and implementation. Mathematical Geology 25, 641-655.</small></p>
+</section>
+
+<section>
+    <h3>Splines with geometry analysis </h3>
+<p>
+<ul>
+    <li>simulatenous topo analysis: gradients, curvatures</li>
+    <li>tuneable level of detail, geometry preserving smoothing </li>
+</ul>
+<p>
+<img width="70%" src="img/lidar_tension_curv.gif">
+<p><small>Mitasova, H., Mitas, L., Harmon, R.S., 2005, Simultaneous spline interpolation and topographic analysis for lidar elevation data: methods for Open source GIS, IEEE GRSL 2(4), 375-379.</small>
+</section>
+
+<section>
+    <h3>Dynamic volume modeling</h3>
+    Groundwater pollution plume interpolated from 10 years of well monitoring data
+    using 4D spline function
+<p>
+    <img width=500 src="img/well456.gif">
+<p><small>
+WM Brown, M Astley, T Baker, H Mitasova, 1995, GRASS as an integrated GIS and visualization system for spatio-temporal modeling AUTOCARTO, 89-99
+</small>
+</section>
+
+<section>
+    <h3>Dynamic water and sediment flow</h3>
+Flow accumulation and sediment transport capacity visualized as dynamic surfaces
+<p>
+<!--    
+    <img width="10%" src="img/nc1_f.gif">  
+&nbsp; &nbsp; &nbsp;-->
+    <img width="42%" src="img/water.gif"> 
+&nbsp; &nbsp;
+    <img width="42%" src="img/lsfac.gif">
+<p><small>
+Mitasova, H., L. Mitas, B.M. Brown, D.P. Gerdes, I. Kosinovsky, 1995, Modeling spatially and temporally distributed phenomena: New methods and tools for GRASS GIS. IJGIS, 9 (4), 443-446.</small>
+<!--<br>
+Mitas L., Brown W. M., Mitasova H., 1997, Role of dynamic cartography in simulations of landscape processes based on multi-variate fields. Computers and Geosciences, Vol. 23, No. 4, pp. 437-446 -->
+ </section>
+
+<section>
+<h3>Duality of particles and fields </h3>
+    <p>Path sampling method for flow continuity equations
+<p>
+<!--    <img height="300" src="img/balsam_sideimg.jpg"> &nbsp; &nbsp; &nbsp; &nbsp;-->
+    <img width="45%" src="img/fanimwalk.gif"> 
+     &nbsp; &nbsp;
+    <img width="45%" src="img/fanimhhcolp.gif">
+<p><small>Mitas, L., Mitasova, H., 1998, Distributed erosion modeling for effective erosion prevention. Water Resources Research 34(3), pp. 505-516</small>
+</section>
+
+<section>
+    <h2>GRASS 7 innovations</h2>
+</section>
+
+<section>
+    <h3 style="margin-bottom: 1em">Space-Time Framework </h3>
+<ul>
+<p><li>Space-time 2D,3D raster and vector datatypes
+<p><li>Time series datasets managed in temporal database
+<p><li>New modules: query, aggregation, conversion, statistics, gap filling
+</ul>
+<p><small> Gebbert, S., Pebesma, E., 2014. TGRASS: A temporal GIS for field based environmental modeling.
+Environmental Modelling & Software 53, 1-12. </small>
+</section>
+
+<section>
+    <h3>MODIS land surface temperature</h3>
+<p>
+<ul>
+<li>14 years of 4/day (20K) maps, entire Europe, 250m res
+<li>advanced statistics to fill no-data and enhance resolution,
+multivariate regression includes elevation, solar angle, precipitation
+</small>
+</ul>
+<p>
+    <img width="48%" src="img/MODIS_LST.jpg"> <img width="44%" src="img/MODIS_USA.jpg">
+<p><small> EuroLST: http://gis.cri.fmach.it/eurolst/, Metz, Rocchini, Neteler, 2014: Rem Sens, 6(5): 3822-3840</small>
+</section>
+
+
+<section>
+    <h3>DEM time series visualization:</h3>
+    <p>Jockey's Ridge migration 1974 - 2014, lidar time series</p>
+    <img height="350" src="img/jrseries.png">
+    <img width="60%" src="img/animation_without_contour.gif">
+</section>
+
+<section >
+    <h3>Space-Time Cube visualization:</h3>
+    <p>Jockey's Ridge 16m, 20m contour evolution isosurfaces</p>
+  <img height="400" src="img/jr16/animation.gif">
+<!--<img src="img/jr18/animation.gif"> -->
+<img height="400" src="img/jr20/animation.gif">
+</section>
+
+<section>
+<h3>Lidar time series analysis</h3>
+<p>
+<ul>
+<li>core, envelope, homes lost and built
+</ul>
+</section>
+
+<!--
+<section>
+    <h3>Interactive 270 degree visualization </h3>
+    Jockey's Ridge visualization in the Hunt Library teaching and visualization laboratory
+<p>
+    <img height="400" src="img/JR_Huntl.jpg">
+   <img height="450" src="img/JR_Huntlib_HM1.jpg">
+</section>
+-->
+
+<section>
+   <h3>Space time cube for TLS series</h3>
+Stream bank erosion from terrestrial lidar
+<p>
+    <img height="120" src="img/Fifx_DEMs1stlast.png">
+    <img height="250" src="img/Fig8isosurf_change.png">
+<p><small>Starek, M.J., Mitasova H., Wegmann, K, Lyons, N., 2013, 
+Space-Time Cube Representation of Stream Bank Evolution Mapped by 
+Terrestrial Laser Scanning, IEEE GRSL 10(6), p. 1369-1373 </small>
+</section>
+
+<section>
+    <h3>Mapping with sUAS  </h3>
+<p>
+Trimble UX5 UAS flight plan analysis
+<p>
+    <img height=480 src="img/uav_flight_plan.jpg">
+</section>
+
+<section>
+    <h3>Surface water flow modeling  </h3>
+<p>
+<ul>
+<li>SfM in Agisoft or OpenDroneMap > point cloud
+<li>DSM interpolation and path sampling-based surface runoff modeling in GRASS GIS
+</ul>
+<p>
+    <img width="45%" src="img/agisoft_jan.gif">
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <img width="45%" src="img/agisoft_june.gif">
+</section>
+
+<!--
+<section>
+    <h3 style="margin-bottom: 1em">Lidar data processing </h3>
+<p>
+    Solar radiation modeling: summer and winter solstice dynamics
+<p>
+    <img height="400" src="img/summer_solstice_centennial.gif">
+    <img height="400" src="img/winter_solstice_centennial.gif">
+</section>
+-->
+
+<section>
+    <h3>Geomorphons</h3>
+<ul>
+<li>Basic landforms extracted for the entire US 
+<li>Interactive search of similar landuse patterns
+<li>On-line geospatial analytics: http://sil.uc.edu/ 
+<li>Spatial Informatics Laboratory, University of Cincinnati
+</ul>
+<p>
+<img width="85%" src="img/us_geom_26642.jpg">
+</section>
+
+<section>
+    <h3>Tangible Landscape</h3>
+<p>
+Tangible user interface for GRASS GIS
+<p>
+    <img height="200" src="img/tanland_composit.png">
+<p>
+Book: Petrasova, A., Harmon, B., Petras, V., Mitasova, H., 2015, <a href="http://www.springer.com/us/book/9783319257730">
+<em><b>Tangible Modeling with Open Source GIS,</b></em></a>
+Springer International Publishing, 135 p.
+</section>
+
+<section>
+<h3>Why tangible interfaces for GIS?</h3>
+<ul>
+    <li>Interaction through mouse and display can be tedious</li>
+    <li>Manipulating 3D computer models requires specialized software and training, restricts creativity</li>
+    <li>Collaboration is limited as typically only one user at a time can navigate and modify models. </li>
+</ul>
+<p>
+<img height="250px" src="img/collaboration_computer.JPG">
+<img height="250px" src="img/art_rhino.jpg">
+<!-- </br></br></br> -->
+<!-- <h5>Tangible Landscape is designed to make scientific data,
+   models, and simulations exploratory, engaging, and fun</h5> -->
+</section>
+
+<section>
+<h3>How does it work?</h3>
+<iframe data-autoplay width="50%" height="330" src="https://www.youtube.com/embed/Cd3cCQTGer4?rel=0&amp;showinfo=0&amp;loop=1&amp;playlist=Cd3cCQTGer4" frameborder="0" allowfullscreen></iframe>
+<img height=330 src="img/system_schema.png">
+<p>Tangible Landscape couples a digital and a physical model through a continuous cycle of 3D scanning, geospatial modeling, and projection</p>
+</section>
+
+<section>
+<h3>Software</h3>
+<img class="stretch" src="img/software-schema.png">
+</section>
+
+<section>
+<h3>User Interfaces</h3>
+Tangible &nbsp; &nbsp; &nbsp;  Graphical  &nbsp; &nbsp; &nbsp; &nbsp; Command Line
+<img class="stretch" src="img/TUI_GUI_CLI_horizontal.jpg">
+</section>
+
+<section>
+<h3>Interactions</h3>
+<img class="stretch" src="img/interactions.png">
+<table width="100%">
+        <col width="22%">
+        <col width="28%">
+        <col width="28%">
+        <col width="22%">
+        <tr>
+            <td style="vertical-align: middle; text-align:center; border-bottom: 0px; padding: 0;">surface
+            <td style="vertical-align: middle; text-align:center; border-bottom: 0px; padding: 0;">points
+            <td style="vertical-align: middle; text-align:center; border-bottom: 0px; padding: 0;">lines
+            <td style="vertical-align: middle; text-align:center; border-bottom: 0px; padding: 0;" >areas
+        </tr>
+</table>
+</section>
+
+<section>
+<h3>3D soil moisture exploration</h3>
+<img height="150px" src="img/subsurface_1.jpg">
+<img height="150px" src="img/subsurface_2.jpg">
+<img height="150px" src="img/subsurface_3.jpg">
+<img width="80%" src="img/cross_section.png">
+</section>
+
+<section>
+<h3>Wildfire spread</h3>
+<iframe data-autoplay width="853" height="480" src="https://www.youtube.com/embed/EJc57GFJeZI?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<section>
+    <h3>Tangible Landscape + Immersive Virtual Reality</h3>
+    <iframe data-autoplay width="853" height="480"  src="https://www.youtube.com/embed/pYbpEMjME1Y?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</section>
+
+<section>
+<h3>Coupling with contributed modules</h3>
+pyGRASS, R, 
+<p>
+Image composit: Dam breach, overland flow (several modules)
+</section>
+
+<section>
+<h3>Resources for innovators</h3>
+<p>Workshops:
+<ul>
+<li>
+<a href="http://ncsu-geoforall-lab.github.io/grass-intro-workshop/">Introduction to GRASS GIS</a>
+<li>
+<a href="https://github.com/wenzeslaus/python-grass-addon">How to write a Python GRASS GIS 7 addon</a>
+<br>also available as a
+<a href="https://www.youtube.com/watch?v=PX2UpMhp2hc">YouTube video</a>
+<li>
+<a href="https://grasswiki.osgeo.org/wiki/Using_GRASS_GIS_through_Python_and_tangible_interfaces_(workshop_at_FOSS4G_NA_2016)">
+Using GRASS GIS through Python and tangible interfaces</a>
+<li><a href="http://ncsu-geoforall-lab.github.io/grass-temporal-workshop/">
+Spatio-temporal data handling and visualization</a>
+<li>
+<a href="https://grasswiki.osgeo.org/wiki/Workshop_on_urban_growth_modeling_with_FUTURES">
+Urban growth modeling with FUTURES</a>
+</section>
+
+<section>
+    <h3>NCSU Geoforall lab</h3>
+    <h4><a href="geospatial.ncsu.edu/osgeorel/">geospatial.ncsu.edu/osgeorel/</a></h4>
+<ul>
+<p><li><a href="https://cnr.ncsu.edu/geospatial/">NCSU Center for Geospatial Analytics,</a>
+ PhD program in Geospatial Analytics coming in fall 2017
+<li>Member of Geo4all initiative and NA leading lab</li>
+<li>GRASS GIS development, 3 members of GRASS PSC</li> 
+<li>Research: geocomputation and geovisualization</li>
+<li>Courses on-campus and on-line with open source geospatial component</li> 
+</ul>
+<p><small><em><a href="http://www.mdpi.com/2220-9964/4/2/942/pdf">
+        Integrating Free and Open Source Solutions into Geospatial Science Education.</a></em>
+        Petras, V., Petrasova, A., Harmon, B., Meentemeyer, R.K., Mitasova, H.
+         ISPRS IJGI. 2015.</small>
+</section>
+
+<section>
+<h3>Geoforall initiative</h3>
+    <h4>http://www.geoforall.org/</h4>
+<p>map 2011 and now
+<p>challenge for open source cartography - we need a map that fulfills cartographic standards
+</section>
+
+<section>
+<h2>Thank You!</h2>
+<iframe data-autoplay width="753" height="300" src="https://www.youtube.com/embed/Uje8ORyhBaQ?rel=0&amp;showinfo=0&amp;loop=1&amp;playlist=Uje8ORyhBaQ" frameborder="0" allowfullscreen></iframe>
+<p>Tangible Landscape:  <a href="https://tangible-landscape.github.io">tangible-landscape.github.io</a>
+</section>
+<!-- This is a generated file. Do not edit. -->
+        </div>  <!-- slides -->
+
+    </div>  <!-- reveal -->
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                // Display controls in the bottom right corner
+                controls: false,
+
+                // Display a presentation progress bar
+                progress: true,
+                
+                center: true,
+                
+                // Display the page number of the current slide
+                slideNumber: false,
+
+                // Enable the slide overview mode
+                overview: true,
+
+                // Turns fragments on and off globally
+                fragments: true,
+
+                // The "normal" size of the presentation, aspect ratio will be preserved
+                // when the presentation is scaled to fit different resolutions. Can be
+                // specified using percentage units.
+                // width: 960,
+                // height: 700,
+                
+                // Factor of the display size that should remain empty around the content
+                margin: 0.05,  // increase?
+
+                // Bounds for smallest/largest possible scale to apply to content
+                minScale: 0.5,
+                maxScale: 5.0,
+
+                theme: Reveal.getQueryHash().theme,  // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Push each slide change to the browser history
+                history: true,
+                // Enable keyboard shortcuts for navigation
+                keyboard: true,
+
+                // Vertical centering of slides
+                center: true,
+
+                // Enables touch navigation on devices with touch input
+                touch: true,
+
+                // Loop the presentation
+                loop: false,
+                // Flags if the presentation is running in an embedded mode,
+                // i.e. contained within a limited portion of the screen
+                embedded: false,
+
+                // Number of milliseconds between automatically proceeding to the
+                // next slide, disabled when set to 0, this value can be overwritten
+                // by using a data-autoslide attribute on your slides
+                autoSlide: 0,
+
+                // Stop auto-sliding after user input
+                autoSlideStoppable: true,
+
+                // Enable slide navigation via mouse wheel
+                mouseWheel: false,
+
+                // Hides the address bar on mobile devices
+                hideAddressBar: true,
+
+                // Opens links in an iframe preview overlay
+                previewLinks: false,
+
+                // Transition speed
+                transitionSpeed: 'default', // default/fast/slow
+
+                // Transition style for full page slide backgrounds
+                backgroundTransition: 'none', // default/none/slide/concave/convex/zoom
+
+                // Number of slides away from the current that are visible
+                viewDistance: 3,
+
+                // Parallax background image
+                //parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+                // Parallax background size
+                //parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+                chalkboard: { 
+        		// optionally load pre-recorded chalkboard drawing from file
+            		src: "chalkboard.json",
+            	},
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/math/math.js', async: true },
+                    { src: 'plugin/chalkboard/chalkboard.js' }
+                ],
+                keyboard: {
+            	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+            	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+            	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+            	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+            	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+            	},
+            });
+
+        </script>
+
+    </body>
+</html>

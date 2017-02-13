@@ -17,15 +17,20 @@
 
 <section>
     <h3>Maps go digital with GRASS</h3>
-<p>
-Year 1987: Let William Shatner do the introduction
-<br>
-<video data-autoplay width="650" height="500" controls loop>
+<p style="padding-bottom: 1em;">
+    Year 1987: Let William Shatner do the introduction
+<video data-autoplay width="650" controls loop>
     <source src="img/grassmovie_1min.mp4" type="video/mp4">
  Your browser does not support the video tag.
-<p><small>see full 15 min video here <a href="https://www.youtube.com/embed/U3Hf0qI4JLc">https://www.youtube.com/embed/U3Hf0qI4JLc</a></small>
-<!-- FULL Video 
-    <iframe width="650" height="500" src="https://www.youtube.com/embed/U3Hf0qI4JLc" frameborder="0"  webkitallowfullscreen mozallow fullscreen allowfullscreen></iframe> -->
+<p class="small">
+    see full 15 min video at
+    <a href="https://av.tib.eu/media/12963">av.tib.eu/media/12963</a>
+</section>
+
+
+<section>
+<h3>GRASS GIS now</h3>
+<img src="img/hexagons_python_editor.png">
 </section>
 
 
@@ -33,7 +38,8 @@ Year 1987: Let William Shatner do the introduction
 <h3>GRASS GIS</h3>
 
 <ul>
-<li>general purpose GIS/RS/... with GUI, CLI, Python API, C API
+<li>general purpose spatial analysis and remote sensing software
+<li>GUI, CLI, Python API, C API
 <li>backend processing for QGIS, R, ...
 <li>powerful 2D/3D raster, imagery and vector processing
 <li>single/complete integrated software
@@ -46,18 +52,9 @@ Year 1987: Let William Shatner do the introduction
 
 
 <section>
-<h2>History of Innovations</h2>
-</section>
-
-
-<section>
-<h3>GRASS GIS and innovation</h3>
-<ul>
-<li>GRASS has long history - known as a reliable geospatial number cruncher (Neteler 2014)
-<li>Developed as component of research projects - innovation through research
-<li>Many historically innovative tools serve today: our examples are just a small subset
-</ul>
-<p><img height="80" src="img/grass_startup_banner.png">
+<h2>Old Innovations Serving Now</h2>
+<p class="small">
+    * The list is incomplete.
 </section>
 
 
@@ -76,32 +73,27 @@ Year 1987: Let William Shatner do the introduction
 
 
 <section>
-    <h3>Watersheds and stream extraction</h3>
-<p>
-    <ul>
-<p>    <li>First worldwide map of watersheds derived from a global DEM</li>
-<p>    <li>Unique least cost path algorithm, no depression filling needed: 
-        <b>r.watershed</b>
-<p>    <li>Updated for massive data sets (SRTM, lidar DEMs) </li>
+<h3>Watersheds and stream extraction</h3>
+
+<ul>
+    <li>First worldwide map of watersheds derived from a global DEM
+    <li>Unique least cost path algorithm, no depression filling needed:
+        <b>r.watershed</b> (1989)
+    <li>Updated for massive data sets (2011)
 </ul>
-<p><small>
-Ehlschlaeger C., 1989, Using the AT Search Algorithm to Develop Hydrologic Models from Digital Elevation Data, 
-Proc IGIS Symposium '89, 275-281.
-<br>
-Metz M., Mitasova H., and Harmon R.S., 2011, Efficient extraction of drainage networks from massive, radar-based elevation models with least cost path search, Hydrology and Earth System Sciences, 15, 667-678</small>
 </section>
 
 <section>
-    <h3>Multivariate splines </h3>
-<p>
-    2D, 3D and 4D interpolation with tuneable tension </li>
+<h3>Multivariate splines</h3>
+<ul>
+    <li>2D, 3D and 4D interpolation with tuneable tension (1993)
+    <li>Parallelized version coming in 7.4 <!-- 2015-2016 -->
+</ul>
 <p><img width="50%" src="img/tension.gif">
-<p><small>
-Mitasova, H., L. Mitas, 1993, Interpolation by regularized spline with tension: I. Theory and implementation. Mathematical Geology 25, 641-655.</small></p>
 </section>
 
 <section>
-    <h3>Splines with geometry analysis </h3>
+<h3>Splines with geometry analysis</h3>
 <p>
 <ul>
     <li>simultaneous topo analysis: gradients, curvatures</li>
@@ -112,42 +104,15 @@ Mitasova, H., L. Mitas, 1993, Interpolation by regularized spline with tension: 
 <p><small>Mitasova, H., Mitas, L., Harmon, R.S., 2005, Simultaneous spline interpolation and topographic analysis for lidar elevation data: methods for Open source GIS, IEEE GRSL 2(4), 375-379.</small>
 </section>
 
-<section>
-    <h3>Dynamic volume modeling</h3>
-    Groundwater pollution plume interpolated from 10 years of well monitoring data
-    using 4D spline function
-<p>
-    <img width=500 src="img/well456.gif">
-<p><small>
-WM Brown, M Astley, T Baker, H Mitasova, 1995, GRASS as an integrated GIS and visualization system for spatio-temporal modeling AUTOCARTO, 89-99
-</small>
-</section>
 
 <section>
-    <h3>Dynamic water and sediment flow</h3>
-Flow accumulation and sediment transport capacity visualized as dynamic surfaces
+<h3>Path sampling method for flow</h3>
 <p>
-<!--    
-    <img width="10%" src="img/nc1_f.gif">  
-&nbsp; &nbsp; &nbsp;-->
-    <img width="42%" src="img/water.gif"> 
-&nbsp; &nbsp;
-    <img width="42%" src="img/lsfac.gif">
-<p><small>
-Mitasova, H., L. Mitas, B.M. Brown, D.P. Gerdes, I. Kosinovsky, 1995, Modeling spatially and temporally distributed phenomena: New methods and tools for GRASS GIS. IJGIS, 9 (4), 443-446.</small>
-<!--<br>
-Mitas L., Brown W. M., Mitasova H., 1997, Role of dynamic cartography in simulations of landscape processes based on multi-variate fields. Computers and Geosciences, Vol. 23, No. 4, pp. 437-446 -->
- </section>
-
-<section>
-<h3>Duality of particles and fields </h3>
-    <p>Path sampling method for flow continuity equations
+    surface flow and erosion (1998)
 <p>
-<!--    <img height="300" src="img/balsam_sideimg.jpg"> &nbsp; &nbsp; &nbsp; &nbsp;-->
-    <img width="45%" src="img/fanimwalk.gif"> 
-     &nbsp; &nbsp;
+    <img width="45%" src="img/fanimwalk.gif">
+    &nbsp; &nbsp;
     <img width="45%" src="img/fanimhhcolp.gif">
-<p><small>Mitas, L., Mitasova, H., 1998, Distributed erosion modeling for effective erosion prevention. Water Resources Research 34(3), pp. 505-516</small>
 </section>
 
 
@@ -246,16 +211,16 @@ aspect=if(x<em style="color: green;">!=0</em>||y<em style="color: green;">!=0</e
 </section>
 
 <section>
-    <h3 style="margin-bottom: 1em">Space-Time Framework </h3>
+<h3>Spatio-temporal Framework</h3>
 <ul>
-<p><li>Space-time 2D, 3D raster and vector datatypes
-<p><li>Time series datasets managed in temporal database
-<p><li>New modules: query, aggregation, conversion, statistics, gap filling
-<p><li>Temporal algebra: temporal relations, temporal buffer, spatio-temporal operators
+    <li>space and time for 2D, 3D rasters and vectors
+    <li>time series datasets managed in temporal database
+    <li>New modules: query, aggregation, conversion, statistics, gap filling
 </ul>
 <p><small> Gebbert, S., Pebesma, E., 2014. TGRASS: A temporal GIS for field based environmental modeling.
 Environmental Modelling & Software 53, 1-12. </small>
 </section>
+
 
 <section>
     <h3>MODIS land surface temperature</h3>
@@ -294,10 +259,10 @@ multivariate regression includes elevation, solar angle, precipitation
 Stream bank erosion from terrestrial lidar
 <p>
     <img height="270" src="img/DEMs1stlast_vert.jpg">
-    &nbsp; &nbsp; 
+    &nbsp; &nbsp;
     <img height="270" src="img/Fig8isosurf_change.png">
-<p><small>Starek, M.J., Mitasova H., Wegmann, K, Lyons, N., 2013, 
-Space-Time Cube Representation of Stream Bank Evolution Mapped by 
+<p><small>Starek, M.J., Mitasova H., Wegmann, K, Lyons, N., 2013,
+Space-Time Cube Representation of Stream Bank Evolution Mapped by
 Terrestrial Laser Scanning, IEEE GRSL 10(6), p. 1369-1373 </small>
 </section>
 
@@ -327,9 +292,9 @@ Trimble UX5 UAS flight plan analysis
 <section>
     <h3>Geomorphons</h3>
 <ul>
-<li>Basic landforms extracted for the entire US 
+<li>Basic landforms extracted for the entire US
 <li>Interactive search of similar landuse patterns
-<li>On-line geospatial analytics: http://sil.uc.edu/ 
+<li>On-line geospatial analytics: http://sil.uc.edu/
 <li>Spatial Informatics Laboratory, University of Cincinnati
 </ul>
 <p>
@@ -423,10 +388,19 @@ gs.run_command('r.fill.dir', input='elev',
 
 
 <section>
+<h3>Python</h3>
+<ul>
+    <li>since GRASS GIS 7.2 also integrated editor
+</ul>
+<img src="img/grass_pyedit.png">
+</section>
+
+
+<section>
 <h3>Perl</h3>
 
 <pre><code>system("r.fill.dir", "input=elev",
-               "output=fill", "direction=dir")
+       "output=fill", "direction=dir")
 </code></pre>
 
 <h3>PHP</h3>
@@ -485,9 +459,9 @@ boundaries.open(mode='r')
 
 <ul>
     <li>access to most of GRASS GIS modules
+    <li>unified interface to GDAL, SAGA, OTB, ...
     <li>Python interface as well
-    <li>unified interface to GDAL, OTB, ...
-    <li>also accessible through RQGIS
+    <li>also accessible through RQGIS in R
 </ul>
 </section>
 
@@ -561,6 +535,21 @@ Booth
 
 <section>
 <h2>GRASS GIS 7.2 and ongoing work</h2>
+</section>
+
+
+<section>
+<h3>Temporal algebra</h3>
+<ul>
+    <li>temporal relations, temporal buffer, spatio-temporal operators
+    <li>includes spatial 2D raster, 3D raster and vector algebra
+    <li>prototype available in 2013, full version in 7.2
+</ul>
+<pre>D = if(start_date(A) &lt; "2005-01-01", A &amp; B)
+</pre>
+<p class="small">
+    Spatially intersect (&amp;) features for each time step in A and B
+    after Jan 1, 2005
 </section>
 
 

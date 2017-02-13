@@ -60,6 +60,7 @@ if [ $? -ne 0 ]; then
     exit
 elif [ "master" = "$current_branch" ]; then
     echo "You are not on gh-pages branch in $build_dir, so you cannot publish pages." 1>&2;
+    echo "Did you used the dedicated script to create or get the branch?"
     echo "Using \"git branch\" to show current branches."
     git branch
     exit

@@ -83,25 +83,46 @@
 </ul>
 </section>
 
+
+<section>
+<h3>3D view</h3>
+<p>
+    <img height="480" src="img/uav_flight_plan.jpg">
+</section>
+
+
+<section>
+<h3>Space-Time Cube visualization</h3>
+<p>
+    Jockey's Ridge 16m, 20m contour evolution isosurfaces
+<p>
+    <img height="400" src="img/jr16/animation.gif">
+    <img height="400" src="img/jr20/animation.gif">
+</section>
+
+
 <section>
 <h3>Multivariate splines</h3>
 <ul>
     <li>2D, 3D and 4D interpolation with tuneable tension (1993)
     <li>Parallelized version coming in 7.4 <!-- 2015-2016 -->
-</ul>
-<p><img width="50%" src="img/tension.gif">
-</section>
-
-<section>
-<h3>Splines with geometry analysis</h3>
-<p>
-<ul>
+    <li>Splines with geometry analysis
     <li>simultaneous topo analysis: gradients, curvatures</li>
     <li>tuneable level of detail, geometry preserving smoothing </li>
 </ul>
 <p>
-<img width="70%" src="img/lidar_tension_curv.gif">
-<p><small>Mitasova, H., Mitas, L., Harmon, R.S., 2005, Simultaneous spline interpolation and topographic analysis for lidar elevation data: methods for Open source GIS, IEEE GRSL 2(4), 375-379.</small>
+    <img width="70%" src="img/lidar_tension_curv.gif">
+</section>
+
+
+<section>
+<h3>64bit version</h3>
+<ul>
+    <li>since 2005 on Linux, Mac, Unix
+    <li>long established 64bit (nobody even talks about it)
+    <li>since 2016 on MS Windows
+    <li>also: large file support even on 32bit MS Windows
+</ul>
 </section>
 
 
@@ -133,8 +154,8 @@ r.mapcalc depr.bin="if((elev - fill)&lt; 0., 1, 0)"
 </pre>
 
 Works in 6.4 as is
-
 </section>
+
 
 <section>
 <h3>Current version: 7.2</h3>
@@ -223,79 +244,12 @@ Environmental Modelling & Software 53, 1-12. </small>
 
 
 <section>
-    <h3>MODIS land surface temperature</h3>
-<p>
+<h3>Geomorphons</h3>
 <ul>
-<li>14 years of 4/day (20K) maps, entire Europe, 250m res
-<li>advanced statistics to fill no-data and enhance resolution,
-multivariate regression includes elevation, solar angle, precipitation
-</small>
-</ul>
-<p>
-    <img width="48%" src="img/MODIS_LST.jpg"> <img width="44%" src="img/MODIS_USA.jpg">
-<p><small> EuroLST: http://gis.cri.fmach.it/eurolst/, Metz, Rocchini, Neteler, 2014: Rem Sens, 6(5): 3822-3840</small>
-</section>
-
-
-<section>
-    <h3>DEM time series visualization</h3>
-    <p>Jockey's Ridge migration 1974 - 2014, lidar time series</p>
-    <img height="350" src="img/jrseries.png">
-    <img width="60%" src="img/animation_without_contour.gif">
-<p><small>Hardin, E., Mitasova, H., Tateosian, L., Overton, M., 2014, GIS-based Analysis of Coastal Lidar Time-Series, Springer Briefs in Computer Science, Springer, New York, 84 p.</small>
-</section>
-
-<section >
-    <h3>Space-Time Cube visualization</h3>
-    <p>Jockey's Ridge 16m, 20m contour evolution isosurfaces</p>
-  <img height="400" src="img/jr16/animation.gif">
-<!--<img src="img/jr18/animation.gif"> -->
-<img height="400" src="img/jr20/animation.gif">
-</section>
-
-
-<section>
-   <h3>Space time cube for TLS series</h3>
-Stream bank erosion from terrestrial lidar
-<p>
-    <img height="270" src="img/DEMs1stlast_vert.jpg">
-    &nbsp; &nbsp;
-    <img height="270" src="img/Fig8isosurf_change.png">
-<p><small>Starek, M.J., Mitasova H., Wegmann, K, Lyons, N., 2013,
-Space-Time Cube Representation of Stream Bank Evolution Mapped by
-Terrestrial Laser Scanning, IEEE GRSL 10(6), p. 1369-1373 </small>
-</section>
-
-<section>
-    <h3>Mapping with sUAS  </h3>
-<p>
-Trimble UX5 UAS flight plan analysis
-<p>
-    <img height=480 src="img/uav_flight_plan.jpg">
-</section>
-
-<section>
-    <h3>Surface water flow modeling  </h3>
-<p>
-<ul>
-<li>SfM in Agisoft or OpenDroneMap > point cloud
-<li>DSM interpolation and path sampling-based surface runoff modeling in GRASS GIS
-</ul>
-<p>
-    <img width="40%" src="img/agisoft_jan.gif">
-    &nbsp; &nbsp; &nbsp; &nbsp;
-    <img width="40%" src="img/agisoft_june.gif">
-<p><small>Jeziorska, J; Mitasova, H; Petrasova, A; Petras, V; Divakaran, D; Zajkowski, T., 2016, Overland flow analysis using time series of sUAS-derived elevation models, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol III-8, pp.159-166</small>
-</section>
-
-
-<section>
-    <h3>Geomorphons</h3>
-<ul>
-<li>Basic landforms extracted for the entire US
-<li>Interactive search of similar landuse patterns
-<li>On-line geospatial analytics: http://sil.uc.edu/
-<li>Spatial Informatics Laboratory, University of Cincinnati
+    <li>landform detection
+    <li>Basic landforms extracted for the entire US
+    <li>On-line geospatial analytics: <a href="http://sil.uc.edu">sil.uc.edu</a>
+    <li>Spatial Informatics Laboratory, University of Cincinnati
 </ul>
 <p>
 <img width="85%" src="img/us_geom_26642.jpg">
@@ -312,16 +266,50 @@ Trimble UX5 UAS flight plan analysis
 <img width="90%" src="img/module_references.png">
 </section>
 
+
 <section>
 <h3>Public author &amp; accessible code</h3>
 <img width="90%" src="img/module_author_source.png">
 </section>
+
 
 <section>
 <h3>Discussions archived</h3>
 <img width="90%" src="img/mailing_list.png">
 <p>
 since 1991
+</section>
+
+
+<section>
+<h3>Addos repository</h3>
+<ul>
+    <li>user contributed modules, plugins, tools, functions
+    <li>distributed to users
+    <li>including compiled C and C++ for MS Windows
+    <li>automatically generated GUI
+</ul>
+</section>
+
+
+<section>
+<h3>User-reviewed implementation</h3>
+<ul>
+    <li>user tested the module
+    <li>discovered error in equation in code
+</ul>
+<p>
+    <img src="img/bug_in_equation.png">
+</section>
+
+
+<section>
+<h3>Reduced limits</h3>
+<ul>
+    <li>people limited by tools
+    <li>many fields covered
+    <li>no borders between remote sensing and vector network analysis
+</ul>
 </section>
 
 
@@ -519,17 +507,13 @@ boundaries.open(mode='r')
 
 
 <section>
-    <h3>Tangible Landscape</h3>
+<h3>Tangible Landscape</h3>
 <p>
 Tangible user interface for GRASS GIS
 <p>
     <img height="200" src="img/tanland_composit.png">
 <p>
-Book: Petrasova, A., Harmon, B., Petras, V., Mitasova, H., 2015, <a href="http://www.springer.com/us/book/9783319257730">
-<em><b>Tangible Modeling with Open Source GIS,</b></em></a>
-Springer International Publishing, 135 p.
-
-Booth
+    Visit NC State Booth
 </section>
 
 
@@ -567,8 +551,38 @@ Booth
 
 
 <section>
-<h3>Resources for innovators</h3>
-<p>Workshops
+<h3>FUTURES</h3>
+<p>
+    landuse modeling
+<!--><p>
+    <img src="img/viridis_comparison.png">
+<p class="small">
+    viridis and rainbow and their luminance-->
+</section>
+
+
+<section>
+<h3>SLIC Superpixels</h3>
+<img src="img/slic_request.png" alt="Would someone be interested in implementing SLIC image segmentation?">
+<p class="small">
+    SLIC: Simple Linear Iterative Clustering
+</section>
+
+
+<section>
+<h3>SLIC Superpixels</h3>
+<img src="img/slic_post.png">
+</section>
+
+
+<section>
+<h3>SLIC Superpixels</h3>
+<img src="img/i_superpixels_slic_ndvi.png">
+</section>
+
+
+<section>
+<h3>Resources</h3>
 <ul>
 <li>
 <a href="http://ncsu-geoforall-lab.github.io/grass-intro-workshop/">Introduction to GRASS GIS</a>

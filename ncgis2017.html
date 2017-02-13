@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en">
+<!-- This is a generated file. Do not edit. -->
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>33 Years of GRASS GIS as an Innovation Platform</title>
+
+        <meta name="description" content="Template for lecture slides of NCSU OSGeoREL courses">
+        <meta name="author" content="Vaclav Petras">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+        <!-- For chalkboard plugin -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+
+        <style>
+        body {
+        /*background-color: #FFF !important;*/
+        /*
+          background-image: url("pictures/elevation-nagshead.gif");
+          background-repeat: no-repeat;
+          background-position: left bottom;*/
+        }
+        .reveal section img {
+            background: transparent;
+            border: 0;
+            box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+        }
+        /* for standalone frame */
+        /*
+        iframe {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        */
+        /* display: inline; background-color: #002B36; padding: 0px; margin: 0px */
+        .rounded-corners {
+            border: 0px solid black;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -khtml-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+        a {
+            color: #060 !important;
+        }
+        a:hover {
+            color: #060 !important;
+            text-decoration: underline !important;
+        }
+        h1, h2, h3, h4, h5 {
+            text-transform: none !important;
+            /* word-break: keep-all; text-transform: none; font-size: 200%; line-height: 110%; */
+            color: #060 !important;
+            /* color: #444 !important; */ /* grey from the wab page */
+            font-weight: bold !important;
+            -webkit-hyphens: none !important;
+            -moz-hyphens: none !important;
+            -ms-hyphens: none !important;
+            hyphens: none !important;
+            line-height: 110% !important;
+        }
+        .reveal .progress span {
+            background-color: #060 !important;
+        }
+        /* predefined element positioning */
+        .top {
+            /*position: relative;*/
+            top: 5%;
+            height: 45%; /* is the height even needed? */
+        }
+        .bottom {
+            height: 45%;
+        }
+        .ne {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            height: 45%;
+            width: 45%;
+        }
+        .nw {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            height: 45%;
+            width: 45%;
+        }
+        .se {
+            position: absolute;
+            bottom: 5%;
+            right: 5%;
+            height: 45%;
+            width: 45%;
+        }
+        .sw {
+            position: absolute;
+            bottom: 5%;
+            left: 5%;
+            height: 45%;
+            width: 45%;
+        }
+
+        /* classes for sections with predefined elements */
+        /* using !important because, reveal styles are applied afterwards  */
+        .right, .textimg > img, .textimg > video, .textimg > iframe, .imgtext > p, .imgtext > ul, .imgtext > ol, .imgtext > div {
+            float: right;
+            text-align: left;
+            max-width: 47% !important;
+        }
+        .left, .imgtext > img, .imgtext > video, imgtext > iframe, .textimg > p, .textimg > ul, .textimg > ol, .textimg > div {
+            float: left;
+            text-align: left;
+            max-width: 47% !important;
+        }
+        li > ul, li > ol {
+            font-size: 85% !important;
+            line-height: 110% !important;
+        }
+        .small {
+            font-size: smaller !important;
+            color: gray;
+            margin: 0.1em !important;
+        }
+        .credit {
+            font-size: small !important;
+            color: gray;
+            margin: 0.1em !important;
+        }
+        .reveal pre {
+            font-size: 90%; !important;
+            width: 100%; !important;
+        }
+        /* TODO: update Reveal.js
+           https://github.com/hakimel/reveal.js/issues/1002 */
+        .reveal > .slides > section {
+            transform-style: flat;
+        }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+<section>
+    <h4>33 years of</h4>
+    <h3>GRASS GIS</h3>
+    <h4>as an innovation platform</h4>
+    <p style="margin-top: 0.5em">
+        Vaclav Petras</p>
+    <p class="title-foot">
+        <a href="http://www.ncsu.edu/" title="North Carolina State University">NCSU</a>
+        <a href="http://geospatial.ncsu.edu/osgeorel/" title="NCSU GeoForAll Lab">GeoForAll Lab</a>
+        at
+        <a href="http://geospatial.ncsu.edu/" title="Center for Geospatial Analytics">Center for Geospatial Analytics</a>
+        <br>
+    </p>
+    <p>NCGIS, Feb 22-24, 2017, Raleigh NC</p>
+</section>
+
+
+<section>
+    <h3>Maps go digital with GRASS</h3>
+<p style="padding-bottom: 1em;">
+    Year 1987: Let William Shatner do the introduction
+<video data-autoplay width="650" controls loop>
+    <source src="img/grassmovie_1min.mp4" type="video/mp4">
+ Your browser does not support the video tag.
+<p class="small">
+    see full 15 min video at
+    <a href="https://av.tib.eu/media/12963">av.tib.eu/media/12963</a>
+</section>
+
+
+<section>
+<h3>GRASS GIS now</h3>
+<img src="img/hexagons_python_editor.png">
+</section>
+
+
+<section>
+<h3>GRASS GIS</h3>
+
+<ul>
+<li>general purpose spatial analysis and remote sensing software
+<li>GUI, CLI, Python API, C API
+<li>backend processing for QGIS, R, ...
+<li>powerful 2D/3D raster, imagery and vector processing
+<li>single/complete integrated software
+<li>over 30 years of development
+</ul>
+
+<p>
+    <a href="https://grass.osgeo.org">grass.osgeo.org</a>
+</section>
+
+
+<section>
+<h2>Old Innovations Serving Now</h2>
+<p class="small">
+    * The list is incomplete.
+</section>
+
+
+<section>
+    <h3>Solar radiation modeling</h3>
+<ul style="margin-bottom: 0em; padding-bottom: 0em">
+    <li>available for about 20 years <!-- 2017: more than 17 years -->
+    <li>renewed several times (2002, 2003, 2006, 2008)
+    <li style="margin-bottom: 0em; padding-bottom: 0em">parallelized version coming in 7.4
+</ul>
+<p style="margin-top: 0em; padding-top: 0em; margin-bottom: 0em; padding-bottom: 0em;" >
+    <img style="margin: 0em;" height="400" src="img/summer_solstice_centennial.gif">
+<p class="small" style="margin-top: 0em !important; padding-top: 0em">
+    summer solstice dynamics on lidar DEM
+</section>
+
+
+<section>
+<h3>Watersheds and stream extraction</h3>
+
+<ul>
+    <li>First worldwide map of watersheds derived from a global DEM
+    <li>Unique least cost path algorithm, no depression filling needed:
+        <b>r.watershed</b> (1989)
+    <li>Updated for massive data sets (2011)
+</ul>
+</section>
+
+<section>
+<h3>Multivariate splines</h3>
+<ul>
+    <li>2D, 3D and 4D interpolation with tuneable tension (1993)
+    <li>Parallelized version coming in 7.4 <!-- 2015-2016 -->
+</ul>
+<p><img width="50%" src="img/tension.gif">
+</section>
+
+<section>
+<h3>Splines with geometry analysis</h3>
+<p>
+<ul>
+    <li>simultaneous topo analysis: gradients, curvatures</li>
+    <li>tuneable level of detail, geometry preserving smoothing </li>
+</ul>
+<p>
+<img width="70%" src="img/lidar_tension_curv.gif">
+<p><small>Mitasova, H., Mitas, L., Harmon, R.S., 2005, Simultaneous spline interpolation and topographic analysis for lidar elevation data: methods for Open source GIS, IEEE GRSL 2(4), 375-379.</small>
+</section>
+
+
+<section>
+<h3>Path sampling method for flow</h3>
+<p>
+    surface flow and erosion (1998)
+<p>
+    <img width="45%" src="img/fanimwalk.gif">
+    &nbsp; &nbsp;
+    <img width="45%" src="img/fanimhhcolp.gif">
+</section>
+
+
+<section>
+<h2>Innovation with stability</h2>
+</section>
+
+
+<section>
+<h3>2002 code in 2017</h3>
+<p>
+Command line code from the 1st edition of
+the "GRASS book" (Neteler, Mitasova)
+for version 5 pre-release, 2002
+
+<pre>r.fill.dir in=elev elev=fill dir=dir
+r.mapcalc depr.bin="if((elev - fill)&lt; 0., 1, 0)"
+</pre>
+
+Works in 6.4 as is
+
+</section>
+
+<section>
+<h3>Current version: 7.2</h3>
+<p>
+
+version 5 pre-release
+
+<pre>r.fill.dir in=elev elev=fill dir=dir
+</pre>
+
+doesn't work in GRASS GIS 7, but gives advice:
+
+<pre>Sorry, &lt;elev&gt; is not a valid parameter
+Required parameter &lt;output&gt; not set:
+Name for output depressionless elevation
+</pre>
+
+fix for version 7:
+<pre>r.fill.dir in=elev <em style="color: red;">output</em>=fill dir=dir
+</pre>
+
+</section>
+
+<section>
+<h3> Return of investment</h3>
+
+Raster algebra
+
+version 5 pre-release and as is in G7:
+<pre>r.mapcalc depr.bin="if((elev - fill)&lt; 0., 1, 0)"
+</pre>
+
+better:
+<pre>r.mapcalc <em style="color: red;">"</em>depr<em style="color: red;">_</em>bin<em style="background-color: #FFDDDD;"> = </em>if((elev - fill) &lt; 0., 1, 0)"
+</pre>
+</section>
+
+<section>
+<h3>Removed module</h3>
+<ul>
+    <li>r.los replaced by r.viewshed in 7.0
+    <li>existed together for some time in 6.x
+    <li>r.los still available in Addons
+</ul>
+</section>
+
+
+
+<section>
+<h3>Raster algebra from 1992</h3>
+
+15 lines long expression, 2 lines changed
+
+<p>
+
+1992:
+
+<pre>slope=<em style="color: red;">90.</em>-atan(sqrt(x*x + y*y)),
+a=round(atan(x,y)),
+aspect=if(x||y,if(a,a,360)),
+</pre>
+
+2017:
+
+<pre>slope=-atan(sqrt(x*x + y*y)),
+a=round(atan(x,y)),
+aspect=if(x<em style="color: green;">!=0</em>||y<em style="color: green;">!=0</em>,if(a,a,360)),
+</pre>
+
+</section>
+
+<section>
+<h2>GRASS GIS 7.0</h2>
+</section>
+
+<section>
+<h3>Spatio-temporal Framework</h3>
+<ul>
+    <li>space and time for 2D, 3D rasters and vectors
+    <li>time series datasets managed in temporal database
+    <li>New modules: query, aggregation, conversion, statistics, gap filling
+</ul>
+<p><small> Gebbert, S., Pebesma, E., 2014. TGRASS: A temporal GIS for field based environmental modeling.
+Environmental Modelling & Software 53, 1-12. </small>
+</section>
+
+
+<section>
+    <h3>MODIS land surface temperature</h3>
+<p>
+<ul>
+<li>14 years of 4/day (20K) maps, entire Europe, 250m res
+<li>advanced statistics to fill no-data and enhance resolution,
+multivariate regression includes elevation, solar angle, precipitation
+</small>
+</ul>
+<p>
+    <img width="48%" src="img/MODIS_LST.jpg"> <img width="44%" src="img/MODIS_USA.jpg">
+<p><small> EuroLST: http://gis.cri.fmach.it/eurolst/, Metz, Rocchini, Neteler, 2014: Rem Sens, 6(5): 3822-3840</small>
+</section>
+
+
+<section>
+    <h3>DEM time series visualization</h3>
+    <p>Jockey's Ridge migration 1974 - 2014, lidar time series</p>
+    <img height="350" src="img/jrseries.png">
+    <img width="60%" src="img/animation_without_contour.gif">
+<p><small>Hardin, E., Mitasova, H., Tateosian, L., Overton, M., 2014, GIS-based Analysis of Coastal Lidar Time-Series, Springer Briefs in Computer Science, Springer, New York, 84 p.</small>
+</section>
+
+<section >
+    <h3>Space-Time Cube visualization</h3>
+    <p>Jockey's Ridge 16m, 20m contour evolution isosurfaces</p>
+  <img height="400" src="img/jr16/animation.gif">
+<!--<img src="img/jr18/animation.gif"> -->
+<img height="400" src="img/jr20/animation.gif">
+</section>
+
+
+<section>
+   <h3>Space time cube for TLS series</h3>
+Stream bank erosion from terrestrial lidar
+<p>
+    <img height="270" src="img/DEMs1stlast_vert.jpg">
+    &nbsp; &nbsp;
+    <img height="270" src="img/Fig8isosurf_change.png">
+<p><small>Starek, M.J., Mitasova H., Wegmann, K, Lyons, N., 2013,
+Space-Time Cube Representation of Stream Bank Evolution Mapped by
+Terrestrial Laser Scanning, IEEE GRSL 10(6), p. 1369-1373 </small>
+</section>
+
+<section>
+    <h3>Mapping with sUAS  </h3>
+<p>
+Trimble UX5 UAS flight plan analysis
+<p>
+    <img height=480 src="img/uav_flight_plan.jpg">
+</section>
+
+<section>
+    <h3>Surface water flow modeling  </h3>
+<p>
+<ul>
+<li>SfM in Agisoft or OpenDroneMap > point cloud
+<li>DSM interpolation and path sampling-based surface runoff modeling in GRASS GIS
+</ul>
+<p>
+    <img width="40%" src="img/agisoft_jan.gif">
+    &nbsp; &nbsp; &nbsp; &nbsp;
+    <img width="40%" src="img/agisoft_june.gif">
+<p><small>Jeziorska, J; Mitasova, H; Petrasova, A; Petras, V; Divakaran, D; Zajkowski, T., 2016, Overland flow analysis using time series of sUAS-derived elevation models, ISPRS Annals of the Photogrammetry, Remote Sensing and Spatial Information Sciences, Vol III-8, pp.159-166</small>
+</section>
+
+
+<section>
+    <h3>Geomorphons</h3>
+<ul>
+<li>Basic landforms extracted for the entire US
+<li>Interactive search of similar landuse patterns
+<li>On-line geospatial analytics: http://sil.uc.edu/
+<li>Spatial Informatics Laboratory, University of Cincinnati
+</ul>
+<p>
+<img width="85%" src="img/us_geom_26642.jpg">
+</section>
+
+
+<section>
+<h2>More than just code</h2>
+</section>
+
+
+<section>
+<h3>Link to research papers</h3>
+<img width="90%" src="img/module_references.png">
+</section>
+
+<section>
+<h3>Public author &amp; accessible code</h3>
+<img width="90%" src="img/module_author_source.png">
+</section>
+
+<section>
+<h3>Discussions archived</h3>
+<img width="90%" src="img/mailing_list.png">
+<p>
+since 1991
+</section>
+
+
+<section>
+<h2>User Interfaces</h2>
+</section>
+
+
+<section>
+<h3>Command Line Interface</h3>
+
+<pre>r.fill.dir input=elev output=fill direction=dir
+</pre>
+
+scripting with Shell, Bash, cmd.exe, ...
+
+</section>
+
+
+<section>
+<h3>Graphical User Interface</h3>
+
+<ul>
+    <li>
+</ul>
+
+<p>
+<img src="img/grass_gui.png">
+
+</section>
+
+
+<section>
+<h3>Graphical Modeler</h3>
+
+<ul>
+    <li>
+</ul>
+
+<p>
+<img src="img/grass_gmodeler.png">
+
+</section>
+
+
+<section>
+<h3>Python</h3>
+
+<!--
+Python: os.system mentioned in 1.4 doc, exec... documented, Dec 1996
+GRASS GIS: Jul 20, 2008, r32179
+-->
+
+<ul>
+    <li>since Python existed (90s)
+    <li>API and use in GRASS GIS itself in 2008
+    <li>grass package part of GRASS GIS
+</ul>
+<pre><code>import grass.script as gs
+gs.run_command('r.fill.dir', input='elev',
+               output='fill', direction='dir')
+</code></pre>
+</section>
+
+
+<section>
+<h3>Python</h3>
+<ul>
+    <li>since GRASS GIS 7.2 also integrated editor
+</ul>
+<img src="img/grass_pyedit.png">
+</section>
+
+
+<section>
+<h3>Perl</h3>
+
+<pre><code>system("r.fill.dir", "input=elev",
+       "output=fill", "direction=dir")
+</code></pre>
+
+<h3>PHP</h3>
+
+<pre><code>system("r.fill.dir input=elev output=fill direction=dir")
+</code></pre>
+
+</section>
+
+
+<section>
+<h3>R</h3>
+
+<ul>
+    <li>not part of GRASS GIS but well established
+    <li>rgrass7 package
+</ul>
+<pre><code>execGRASS("r.fill.dir", input = "elev",
+          output = "fill", direction = "dir")
+</code></pre>
+
+</section>
+
+
+<section>
+<h3>Ruby</h3>
+
+<ul>
+    <li>unofficial but rich
+    <li>grassgis gem
+</ul>
+<pre><code>r.fill.dir input: 'elev', output: 'fill',
+           direction: 'dir'
+</code></pre>
+
+</section>
+
+<section>
+<h3>C</h3>
+
+<ul>
+    <li>used by GRASS GIS itself
+    <li>works for C++ as well
+    <li>Pythonic wrapper available in Python through grass.pygrass package
+</ul>
+<pre><code># Python
+boundaries = VectorTopo('boudaries')
+boundaries.open(mode='r')
+</code></pre>
+
+</section>
+
+
+<section>
+<h3>QGIS Processing plugin</h3>
+
+<ul>
+    <li>access to most of GRASS GIS modules
+    <li>unified interface to GDAL, SAGA, OTB, ...
+    <li>Python interface as well
+    <li>also accessible through RQGIS in R
+</ul>
+</section>
+
+
+<section>
+<h3>QGIS GRASS plugin</h3>
+
+<ul>
+    <li>access to almost all of GRASS GIS modules
+    <li>seamless integration with GRASS GIS native database
+    <li>includes also CLI (GRASS shell)
+</ul>
+
+</section>
+
+
+<section>
+<h3>Jupyter</h3>
+
+<ul>
+    <li>methods, code and results together
+    <li>doesn't matter anymore if Python, R or Bash
+</ul>
+
+</section>
+
+
+<section>
+<h3>WPS</h3>
+
+<ul>
+    <li>ZOO or PyWPS
+</ul>
+
+</section>
+
+
+<section>
+<h3>gvSIG, Java</h3>
+
+<ul>
+    <li>SEXTANTE in past
+    <li>gvSIG plugins coming soon
+    <li>JGrasstools under development
+</ul>
+
+</section>
+
+
+<section>
+<h3>Command Line</h3>
+<p>
+    <img height="400" src="img/cmdline_grass_movide.png">
+</section>
+
+
+<section>
+    <h3>Tangible Landscape</h3>
+<p>
+Tangible user interface for GRASS GIS
+<p>
+    <img height="200" src="img/tanland_composit.png">
+<p>
+Book: Petrasova, A., Harmon, B., Petras, V., Mitasova, H., 2015, <a href="http://www.springer.com/us/book/9783319257730">
+<em><b>Tangible Modeling with Open Source GIS,</b></em></a>
+Springer International Publishing, 135 p.
+
+Booth
+</section>
+
+
+<section>
+<h2>GRASS GIS 7.2 and ongoing work</h2>
+</section>
+
+
+<section>
+<h3>Temporal algebra</h3>
+<ul>
+    <li>temporal relations, temporal buffer, spatio-temporal operators
+    <li>includes spatial 2D raster, 3D raster and vector algebra
+    <li>prototype available in 2013, full version in 7.2
+</ul>
+<pre>D = if(start_date(A) &lt; "2005-01-01", A &amp; B)
+</pre>
+<p class="small">
+    Spatially intersect (&amp;) features for each time step in A and B
+    after Jan 1, 2005
+</section>
+
+
+<section>
+<h3>Default color table</h3>
+<p>
+    Perceptually uniform &mdash; viridis
+<p class="small">
+    following Matplotlib
+<p>
+    <img src="img/viridis_comparison.png">
+<p class="small">
+    viridis and rainbow and their luminance
+</section>
+
+
+<section>
+<h3>Resources for innovators</h3>
+<p>Workshops
+<ul>
+<li>
+<a href="http://ncsu-geoforall-lab.github.io/grass-intro-workshop/">Introduction to GRASS GIS</a>
+<li>
+<a href="https://github.com/wenzeslaus/python-grass-addon">How to write a Python GRASS GIS 7 addon</a>
+<br>also available as a
+<a href="https://www.youtube.com/watch?v=PX2UpMhp2hc">YouTube video</a>
+<li>
+<a href="https://grasswiki.osgeo.org/wiki/Using_GRASS_GIS_through_Python_and_tangible_interfaces_(workshop_at_FOSS4G_NA_2016)">
+Using GRASS GIS through Python and tangible interfaces</a>
+<li><a href="http://ncsu-geoforall-lab.github.io/grass-temporal-workshop/">
+Spatio-temporal data handling and visualization</a>
+<li>
+<a href="https://grasswiki.osgeo.org/wiki/Workshop_on_urban_growth_modeling_with_FUTURES">
+Urban growth modeling with FUTURES</a>
+</section>
+
+
+<section>
+<h3>GRASS GIS as platform for sustainable Open Science</h3>
+<ul>
+<li><b>Reproducibility</b>: open source is the natural habitat for science and research
+<li><b>Return of Investment</b>: many tools available since 80s, continuously developed
+<li><b>Auto-documentation</b>: map and command history preserved “forever”
+<li><b>Reliability</b>: testing and quality control system (in progress) integrated into the software itself
+<li><b>Longevity for Open Science</b>: code integrated into GRASS  “survives” even if original authors would not continue
+</ul>
+</section>
+
+
+<section>
+    <h3>GeoForAll Network</h3>
+    <h4><a href="http://geoforall.org/">geoforall.org</a></h4>
+Started in 2012, network in 2016
+<img class="stretch" src="/home/vpetras/Pictures/grass/ncgis/geoforall/violet_map2.png">
+</section>
+
+
+<section>
+<img src="img/grasslogo_variant_nobg.png" alt="GRASS GIS logo" style="height: 300px;">
+
+<p>Get your lifelong license now!
+<p><a href="https://grass.osgeo.org">grass.osgeo.org</a>
+<p class="small">
+    See the full list of
+    <a href="https://grass.osgeo.org/grass72/manuals/graphical_index.html">core modules</a>
+    and official
+    <a href="https://grass.osgeo.org/grass72/manuals/addons">addon modules</a>.
+
+</section>
+<!-- This is a generated file. Do not edit. -->
+        </div>  <!-- slides -->
+
+    </div>  <!-- reveal -->
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                // Display controls in the bottom right corner
+                controls: false,
+
+                // Display a presentation progress bar
+                progress: true,
+                
+                center: true,
+                
+                // Display the page number of the current slide
+                slideNumber: false,
+
+                // Enable the slide overview mode
+                overview: true,
+
+                // Turns fragments on and off globally
+                fragments: true,
+
+                // The "normal" size of the presentation, aspect ratio will be preserved
+                // when the presentation is scaled to fit different resolutions. Can be
+                // specified using percentage units.
+                // width: 960,
+                // height: 700,
+                
+                // Factor of the display size that should remain empty around the content
+                margin: 0.05,  // increase?
+
+                // Bounds for smallest/largest possible scale to apply to content
+                minScale: 0.5,
+                maxScale: 5.0,
+
+                theme: Reveal.getQueryHash().theme,  // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'none', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Push each slide change to the browser history
+                history: true,
+                // Enable keyboard shortcuts for navigation
+                keyboard: true,
+
+                // Vertical centering of slides
+                center: true,
+
+                // Enables touch navigation on devices with touch input
+                touch: true,
+
+                // Loop the presentation
+                loop: false,
+                // Flags if the presentation is running in an embedded mode,
+                // i.e. contained within a limited portion of the screen
+                embedded: false,
+
+                // Number of milliseconds between automatically proceeding to the
+                // next slide, disabled when set to 0, this value can be overwritten
+                // by using a data-autoslide attribute on your slides
+                autoSlide: 0,
+
+                // Stop auto-sliding after user input
+                autoSlideStoppable: true,
+
+                // Enable slide navigation via mouse wheel
+                mouseWheel: false,
+
+                // Hides the address bar on mobile devices
+                hideAddressBar: true,
+
+                // Opens links in an iframe preview overlay
+                previewLinks: false,
+
+                // Transition speed
+                transitionSpeed: 'default', // default/fast/slow
+
+                // Transition style for full page slide backgrounds
+                backgroundTransition: 'none', // default/none/slide/concave/convex/zoom
+
+                // Number of slides away from the current that are visible
+                viewDistance: 3,
+
+                // Parallax background image
+                //parallaxBackgroundImage: '', // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+                // Parallax background size
+                //parallaxBackgroundSize: '' // CSS syntax, e.g. "2100px 900px"
+                chalkboard: { 
+        		// optionally load pre-recorded chalkboard drawing from file
+            		src: "chalkboard.json",
+            	},
+                // Optional libraries used to extend on reveal.js
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                ],
+                keyboard: {
+            	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+            	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+            	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+            	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+            	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+            	},
+            });
+
+        </script>
+
+    </body>
+</html>

@@ -153,6 +153,15 @@
             color: gray;
             margin: 0.1em !important;
         }
+        .reveal pre {
+            font-size: 90%; !important;
+            width: 100%; !important;
+        }
+        /* TODO: update Reveal.js
+           https://github.com/hakimel/reveal.js/issues/1002 */
+        .reveal > .slides > section {
+            transform-style: flat;
+        }
         </style>
     </head>
 
@@ -654,9 +663,7 @@ network in 2016: we need better map!
                     { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
                     { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
                     { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
-                    { src: 'plugin/math/math.js', async: true },
-                    { src: 'plugin/chalkboard/chalkboard.js' }
+                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
                 ],
                 keyboard: {
             	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed

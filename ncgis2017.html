@@ -356,7 +356,7 @@ scripting with Shell, Bash, cmd.exe, ...
 </section>
 
 
-<section data-years="1990 2008">
+<section data-years="1990 2008 2012">
 <h3>Python</h3>
 
 <!--
@@ -370,6 +370,7 @@ GRASS GIS: Jul 20, 2008, r32179
     <li>since Python existed (90s)
     <li>API and use in GRASS GIS itself in 2008
     <li>grass package part of GRASS GIS
+    <li>access to GRASS GIS C functions and objects
 </ul>
 <pre><code>import grass.script as gs
 gs.run_command('r.fill.dir', input='elev',
@@ -388,26 +389,12 @@ gs.run_command('r.fill.dir', input='elev',
 
 
 <section>
-<h3>Perl</h3>
-
-<pre><code>system("r.fill.dir", "input=elev",
-       "output=fill", "direction=dir")
-</code></pre>
-
-<h3>PHP</h3>
-
-<pre><code>system("r.fill.dir input=elev output=fill direction=dir")
-</code></pre>
-
-</section>
-
-
-<section>
 <h3>R</h3>
 
 <ul>
     <li>not part of GRASS GIS but well established
     <li>rgrass7 package
+    <li>also accessible through RQGIS
 </ul>
 <pre><code>execGRASS("r.fill.dir", input = "elev",
           output = "fill", direction = "dir")
@@ -417,29 +404,24 @@ gs.run_command('r.fill.dir', input='elev',
 
 
 <section>
-<h3>Ruby</h3>
+<h3>Other languages</h3>
 
 <ul>
-    <li>unofficial but rich
-    <li>grassgis gem
+    <li>C
+        <ul>
+            <li>used by GRASS GIS itself
+            <li>work for C++
+        </ul>
+    <li>Perl
+    <li>PHP
+    <li>Java (JGrasstools, gvSIG)
+    <li>Web Processing Service (ZOO or PyWPS)
+    <li>Jupyter (methods, code and results together)
+    <li>Ruby (dedicated interface: grassgis gem)
 </ul>
+
 <pre><code>r.fill.dir input: 'elev', output: 'fill',
            direction: 'dir'
-</code></pre>
-
-</section>
-
-<section>
-<h3>C</h3>
-
-<ul>
-    <li>used by GRASS GIS itself
-    <li>works for C++ as well
-    <li>Pythonic wrapper available in Python through grass.pygrass package
-</ul>
-<pre><code># Python
-boundaries = VectorTopo('boudaries')
-boundaries.open(mode='r')
 </code></pre>
 
 </section>
@@ -452,7 +434,6 @@ boundaries.open(mode='r')
     <li>access to most of GRASS GIS modules
     <li>unified interface to GDAL, SAGA, OTB, ...
     <li>Python interface as well
-    <li>also accessible through RQGIS in R
 </ul>
 </section>
 
@@ -469,47 +450,21 @@ boundaries.open(mode='r')
 </section>
 
 
-<section>
-<h3>Jupyter</h3>
-
-<ul>
-    <li>methods, code and results together
-    <li>doesn't matter anymore if Python, R or Bash
-</ul>
-
-</section>
-
-
-<section>
-<h3>WPS</h3>
-
-<ul>
-    <li>ZOO or PyWPS
-</ul>
-
-</section>
-
-
-<section>
-<h3>gvSIG, Java</h3>
-
-<ul>
-    <li>SEXTANTE in past
-    <li>gvSIG plugins coming soon
-    <li>JGrasstools under development
-</ul>
-
-</section>
-
-
-<section>
+<section data-years="1987">
 <h3>Command Line</h3>
 <p>
-    <img height="400" src="img/cmdline_grass_movide.png">
+    <img height="600" src="img/cmdline_grass_movide.png">
 </section>
 
 
-<section>
+<section data-years="2017">
+<h3>Command Line</h3>
+<p>
+    <img height="600" src="img/cmdline_tangible.png">
+</section>
+
+
+<section data-years="2006 2014 2017">
 <h3>Tangible Landscape</h3>
 <p>
 Tangible user interface for GRASS GIS

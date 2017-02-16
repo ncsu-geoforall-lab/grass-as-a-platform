@@ -1,6 +1,9 @@
 GRASS GIS as open source innovation platform
 ============================================
 
+* https://ncsu-geoforall-lab.github.io/grass-as-a-platform/autocarto.html
+* https://ncsu-geoforall-lab.github.io/grass-as-a-platform/ncgis2017.html
+
 Getting the manual
 ------------------
 

@@ -162,6 +162,25 @@
         .reveal > .slides > section {
             transform-style: flat;
         }
+        .timeline {
+            display: inline-block;
+            position: absolute;
+            right: 0px;
+            bottom: -100px;
+            top: auto;
+            left: auto;
+            z-index: 30;
+            font-size: medium !important;
+            background-size: cover;
+            width: 100%;
+            position: absolute !important;
+            bottom: 0 !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            left: 0 !important;
+            right: 0 !important;
+            text-align: center !important;
+        }
         </style>
     </head>
 
@@ -563,8 +582,13 @@ network in 2016: we need better map!
 
     </div>  <!-- reveal -->
 
+        <!--<img id="timeline" class="timeline" style="display: none;">-->
+        <div  class="timeline" id="line" />
+
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
         <script>
 
@@ -593,7 +617,7 @@ network in 2016: we need better map!
                 // specified using percentage units.
                 // width: 960,
                 // height: 700,
-                
+
                 // Factor of the display size that should remain empty around the content
                 margin: 0.05,  // increase?
 
@@ -673,6 +697,47 @@ network in 2016: we need better map!
             	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
             	},
             });
+
+            Reveal.addEventListener( 'slidechanged', function( event ) {
+                var timeline = $(event.currentSlide).data('timeline')
+                if (timeline) {
+                    $("#timeline").attr('src', timeline)
+                    $("#timeline").show()
+                } else {
+                    $("#timeline").hide()
+                }
+                var years = $(event.currentSlide).data('years')
+                if (years) {
+                    var min_year = 1980
+                    var max_year = 2022
+                    var all_years = String(years).split(" ")
+                    var num_years = all_years.length;
+                    var svg_lines = ['<svg  class="timeline"  id="line"\
+version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"\
+ width="100%" height="90">\
+    <line x1="0" y1="60" x2="100%" y2="60" stroke="#ff7f00" stroke-width="20"/>'];
+                    for (var i = 0; i < num_years; i++) {
+                        year = all_years[i];
+                        x = (year - min_year) / (max_year - min_year) * 100
+                        x_text = x + 0.5
+                        text = year
+                        line = '<circle\
+       style="fill:#ffffff;stroke:#ff7f00;stroke-width:10;"\
+       cx="' + x + '%"\
+       cy="60"\
+       r="20" />\
+       <text x="' + x_text + '%" y="35" fill="#ff7f00" font-size="40" font-family="sans-serif" font-weight="bold">' + text + '</text>'
+                        svg_lines.push(line)
+                    }
+                    //$("#line").html('<circle       style="fill:#ffffff;stroke:#ff7f00;stroke-width:5;"       cx="400"       cy="85"       r="10" />')
+                    svg_lines.push('</svg>')
+                    $("#line").html(svg_lines.join(' '))
+
+                    $("#line").show()
+                } else {
+                    $("#line").hide()
+                }
+            } );
 
         </script>
 

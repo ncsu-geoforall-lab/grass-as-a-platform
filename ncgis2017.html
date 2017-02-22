@@ -213,11 +213,12 @@ better:
 </section>
 
 <section>
-<h3>Removed module</h3>
+<h3>Replaced module</h3>
 <ul>
     <li>r.los replaced by r.viewshed in 7.0
     <li>existed together for some time in 6.x
     <li>r.los still available in Addons
+    <li>r.viewshed much faster than r.los
 </ul>
 </section>
 
@@ -246,9 +247,22 @@ aspect=if(x<em style="color: green;">!=0</em>||y<em style="color: green;">!=0</e
 
 </section>
 
+
 <section>
 <h2>GRASS GIS 7.0</h2>
 </section>
+
+
+<section data-years="2011">
+<h3>Geomorphons</h3>
+<ul>
+    <li>landform detection
+    <li>basic landforms extracted for the entire US
+    <li><span class="small">Spatial Informatics Laboratory, University of Cincinnati</span>
+</ul>
+<img src="img/us_geom_26642.jpg" class="stretch">
+</section>
+
 
 <section data-years="2014">
 <h3>Spatio-temporal Framework</h3>
@@ -259,19 +273,6 @@ aspect=if(x<em style="color: green;">!=0</em>||y<em style="color: green;">!=0</e
 </ul>
 <p><small> Gebbert, S., Pebesma, E., 2014. TGRASS: A temporal GIS for field based environmental modeling.
 Environmental Modelling & Software 53, 1-12. </small>
-</section>
-
-
-<section>
-<h3>Geomorphons</h3>
-<ul>
-    <li>landform detection
-    <li>Basic landforms extracted for the entire US
-    <li>On-line geospatial analytics: <a href="http://sil.uc.edu">sil.uc.edu</a>
-    <li>Spatial Informatics Laboratory, University of Cincinnati
-</ul>
-<p>
-<img src="img/us_geom_26642.jpg" class="stretch">
 </section>
 
 
@@ -466,6 +467,7 @@ gs.run_command('r.fill.dir', input='elev',
             <li>HPC
         </ul>
     <li>...
+    <li>ESA PROBA-V Mission Exploitation Platform
     <li>rollApp <span class="small">*<a href="https://www.rollapp.com/app/grassgis">rollApp.com</a></span>
     <li>GRaaS (GRASS GIS as a Service) <span class="small">*<a href="https://www.mundialis.de/en/high-performance-computing">mundialis.de</a></span>
 </ul>

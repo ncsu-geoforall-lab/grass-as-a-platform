@@ -12,4 +12,4 @@
     ncgis2017.html
 
 # make this presentation primary for convenience
-cp build/autocarto.html build/index.html
+cp build/ncgis2017.html build/index.html

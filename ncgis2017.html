@@ -29,21 +29,33 @@
 
 
 <section data-years="1983 1987">
-<p>
+<p class="small">
     Let William Shatner do the introduction
-<p>
+</p>
 <video data-autoplay controls loop class="stretch">
     <source src="img/grassmovie_1min.mp4" type="video/mp4">
  Your browser does not support the video tag.
+    </source>
+</video>
 <p class="small">
     see full 15 min video at
     <a href="https://av.tib.eu/media/12963">av.tib.eu/media/12963</a>
+</p>
 </section>
 
 
-<section data-years="2017">
+<section data-years="1983 2017">
 <h3>GRASS GIS now</h3>
 <img src="img/hexagons_python_editor.png" class="stretch">
+</section>
+
+
+<section data-years="1983 2017">
+<h3>GRASS GIS</h3>
+<ul>
+<li>over 30 years of development
+</ul>
+<img src="img/modeler_skyview.png" class="stretch">
 </section>
 
 
@@ -52,15 +64,53 @@
 
 <ul>
 <li>general purpose spatial analysis and remote sensing software
-<li>GUI, CLI, Python API, C API
-<li>backend processing for QGIS, R, ...
 <li>powerful 2D/3D raster, imagery and vector processing
 <li>single/complete integrated software
-<li>over 30 years of development
-<li>OSGeo Foundation project
+</ul>
+
+<img src="img/count_and_modules.png" class="stretch">
+</section>
+
+
+<section data-years="1983 2017">
+<h3>GRASS GIS</h3>
+
+<ul>
+<li>GUI, CLI, Python API, C API
+<li>backend processing for QGIS, R, ..., OpenDroneMap
+</ul>
+
+<img src="img/hexagons_3d_white_outlier.png" class="stretch">
+</section>
+
+
+<section data-years="1983 2017">
+<h3>GRASS GIS</h3>
+
+<ul>
+<li>free
+    <ul>
+        <li>use when you need, pay when you can
+        <li>zero license cost, no license servers
+    </ul>
+<li>user-driven development
+    <ul>
+        <li>users directly interact with developers
+    </ul>
 </ul>
 
 <img src="img/modeler_skyview.png" class="stretch">
+</section>
+
+
+<section data-years="1983 2006 2017">
+<h3>GRASS GIS</h3>
+
+<ul>
+<li><a href="http://osgeo.org/">OSGeo Foundation</a> project
+</ul>
+
+<img src="img/osgeo_project.svg" class="stretch" alt="OSGeo Project label">
 </section>
 
 
@@ -76,13 +126,16 @@
 <ul style="margin-bottom: 0em; padding-bottom: 0em">
     <li>available for about 20 years <!-- introduced in 1993 -->
     <!-- 2017: more than 17 years as tracked by Subversion-->
-    <li>renewed several times (1996, 1999, 2002, 2003, 2006, 2008)
+    <li>renewed multiple times
+        <ul class="small">
+            <li>major changes in 1996, 1999, 2002, 2003, 2006, 2008
+        </ul>
     <li style="margin-bottom: 0em; padding-bottom: 0em">parallelized version coming in 7.4
 </ul>
-<p style="margin-top: 0em; padding-top: 0em; margin-bottom: 0em; padding-bottom: 0em;" >
-    <img style="margin: 0em;" height="400" src="img/summer_solstice_centennial.gif">
-<p class="small" style="margin-top: 0em !important; padding-top: 0em">
+<p class="small" style="margin-top: 0em !important; padding-top: 0em !important">
     summer solstice dynamics on lidar DEM
+</p>
+<img  class="stretch" src="img/summer_solstice_centennial.gif">
 </section>
 
 
@@ -90,11 +143,24 @@
 <h3>Watersheds and stream extraction</h3>
 
 <ul>
-    <li>First worldwide map of watersheds derived from a global DEM
-    <li>Unique least cost path algorithm, no depression filling needed:
-        <b>r.watershed</b> (1989)
-    <li>Updated for massive data sets (2011)
+    <li>first worldwide map of watersheds derived from a global DEM
+    <li>unique least cost path algorithm (1989)
+    <ul>
+        <li>no depression filling needed
+    </ul>
+    <li>updated for massive data sets (2011)
 </ul>
+<img src="img/basins.png" class="stretch">
+</section>
+
+
+<section data-years="2002 2016">
+<h3>Vector topology cleaning</h3>
+<ul>
+    <li>introduced in 2002
+    <li>continuous improvements
+</ul>
+<img src="img/topology_cleaning.png" class="stretch">
 </section>
 
 
@@ -105,32 +171,26 @@
           (It evolved from the earlier GRASS program SG3d)
 -->
 <h3>3D view</h3>
-<p>
-    <img height="480" src="img/uav_flight_plan.jpg">
-</section>
-
-
-<section data-years="1992 1995 2008 2011">
-<h3>Space-Time Cube visualization</h3>
-<p>
-    Jockey's Ridge 16m, 20m contour evolution isosurfaces
-<p>
-    <img height="400" src="img/jr16/animation.gif">
-    <img height="400" src="img/jr20/animation.gif">
+<ul>
+    <li>visualization and analytical visualization
+</ul>
+<p class="small">
+    reviewing UAV fligh path
+</p>
+<img src="img/drone_3d.png" class="stretch">
 </section>
 
 
 <section data-years="1993 2017">
 <h3>Multivariate splines</h3>
 <ul>
-    <li>2D, 3D and 4D interpolation with tuneable tension (1993)
-    <li>Parallelized version coming in 7.4 <!-- 2015-2016 -->
-    <li>Splines with geometry analysis
-    <li>simultaneous topo analysis: gradients, curvatures</li>
-    <li>tuneable level of detail, geometry preserving smoothing </li>
+    <li>2D, 3D and 4D interpolation with tension
+    <li>simultaneous topographic analysis
+        <span class="small">(gradients, curvatures)</span>
+    <li>parallelized version coming in 7.4 <!-- 2015-2016 -->
+    <li>fast spline interpolation as an addon
 </ul>
-<p>
-    <img width="70%" src="img/lidar_tension_curv.gif">
+<img src="img/interpolation_precip_vvolrst.png" class="stretch">
 </section>
 
 
@@ -138,21 +198,37 @@
 <h3>64bit version</h3>
 <ul>
     <li>since 2005 on Linux, Mac, Unix
+    <li>can use more than 4GB RAM
     <li>long established 64bit (nobody even talks about it)
     <li>since 2016 on MS Windows
     <li>also: large file support even on 32bit MS Windows
 </ul>
+<img src="img/hexagons_3d_white_outlier.png" class="stretch">
 </section>
 
 
-<section>
-<h3>Path sampling method for flow</h3>
-<p>
-    surface flow and erosion (1998)
-<p>
-    <img width="45%" src="img/fanimwalk.gif">
-    &nbsp; &nbsp;
-    <img width="45%" src="img/fanimhhcolp.gif">
+<section data-years="1983 2017">
+<h3>Operating system support</h3>
+
+<ul>
+<li>Windows, Mac, Linux
+<li>FreeBSD, IBM AIX, ...
+<ul class="small">
+    <li>accessible source code
+</ul>
+<li>running on
+    <ul>
+        <li>High-Performance Computing clusters
+            <ul class="small">
+                <li>license does not limit number of cores or users
+            </ul>
+        <li>Raspberry Pi
+    </ul>
+</ul>
+
+<img src="img/count_and_modules.png" class="stretch">
+<p class="small">
+    GUI on Ubuntu
 </section>
 
 
@@ -162,48 +238,24 @@
 
 
 <section data-years="2002 2017">
-<h3>2002 code in 2017</h3>
-<p>
-Command line code from the 1st edition of
-the "GRASS book" (Neteler, Mitasova)
-for version 5 pre-release, 2002
-
-<pre>r.fill.dir in=elev elev=fill dir=dir
+<h3>2002 code in 2017?</h3>
+<ul>
+<li>Command line code with raster algebra
+<li>from the 1st edition of the "GRASS book"
+    <span class="small">(Neteler, Mitasova)</span>
+<li>for version 5 pre-release, 2002
+</ul>
+<pre>
 r.mapcalc depr.bin="if((elev - fill)&lt; 0., 1, 0)"
 </pre>
 
-Works in 6.4 as is
 </section>
 
 
-<section>
-<h3>Current version: 7.2</h3>
-<p>
+<section data-years="2002 2017">
+<h3>Return of investment</h3>
 
-version 5 pre-release
-
-<pre>r.fill.dir in=elev elev=fill dir=dir
-</pre>
-
-doesn't work in GRASS GIS 7, but gives advice:
-
-<pre>Sorry, &lt;elev&gt; is not a valid parameter
-Required parameter &lt;output&gt; not set:
-Name for output depressionless elevation
-</pre>
-
-fix for version 7:
-<pre>r.fill.dir in=elev <em style="color: red;">output</em>=fill dir=dir
-</pre>
-
-</section>
-
-<section>
-<h3> Return of investment</h3>
-
-Raster algebra
-
-version 5 pre-release and as is in G7:
+version 5 pre-release and works as is in 7.2:
 <pre>r.mapcalc depr.bin="if((elev - fill)&lt; 0., 1, 0)"
 </pre>
 
@@ -212,39 +264,15 @@ better:
 </pre>
 </section>
 
-<section>
+
+<section data-years="2008 2014">
 <h3>Replaced module</h3>
 <ul>
     <li>r.los replaced by r.viewshed in 7.0
+    <li>r.viewshed much faster than r.los
     <li>existed together for some time in 6.x
     <li>r.los still available in Addons
-    <li>r.viewshed much faster than r.los
 </ul>
-</section>
-
-
-
-<section data-years="1992 2017">
-<h3>Raster algebra from 1992</h3>
-
-15 lines long expression, 2 lines changed
-
-<p>
-
-1992:
-
-<pre>slope=<em style="color: red;">90.</em>-atan(sqrt(x*x + y*y)),
-a=round(atan(x,y)),
-aspect=if(x||y,if(a,a,360)),
-</pre>
-
-2017:
-
-<pre>slope=-atan(sqrt(x*x + y*y)),
-a=round(atan(x,y)),
-aspect=if(x<em style="color: green;">!=0</em>||y<em style="color: green;">!=0</em>,if(a,a,360)),
-</pre>
-
 </section>
 
 
@@ -264,15 +292,38 @@ aspect=if(x<em style="color: green;">!=0</em>||y<em style="color: green;">!=0</e
 </section>
 
 
+<section data-years="2012">
+<h3>Image segmentation</h3>
+<ul>
+    <li>created during Google Summer of Code 2012
+    <li>greatly improved in 2013 <span class="small">(at GRASS GIS Community Sprint)</span>
+    <li>...
+    <li>4 other developers contributed in 2016
+</ul>
+<img src="img/i_segment.png" class="stretch">
+</section>
+
+
 <section data-years="2014">
 <h3>Spatio-temporal Framework</h3>
 <ul>
     <li>space and time for 2D, 3D rasters and vectors
-    <li>time series datasets managed in temporal database
-    <li>New modules: query, aggregation, conversion, statistics, gap filling
+    <li>animation, plot one place over time, query, aggregation,
+        conversion, statistics, gap filling
 </ul>
-<p><small> Gebbert, S., Pebesma, E., 2014. TGRASS: A temporal GIS for field based environmental modeling.
-Environmental Modelling & Software 53, 1-12. </small>
+<img src="img/temporal_precip_temp.png" class="stretch">
+</section>
+
+
+<section data-years="2003 2009 2014">
+<h3>Vector network analysis</h3>
+
+<ul>
+    <li>2003: shortest path, traveling salesman, ...
+    <li>2009: centrality measures, connected components, ...
+    <li>2014: turn cost in network nodes
+</ul>
+<img src="img/network.png" class="stretch">
 </section>
 
 
@@ -293,7 +344,7 @@ Environmental Modelling & Software 53, 1-12. </small>
 </section>
 
 
-<section data-years="1991">
+<section data-years="1991 2017">
 <h3>Discussions archived</h3>
 <img src="img/mailing_list.png" class="stretch">
 <p>
@@ -325,7 +376,7 @@ since 1991
 <section>
 <h3>Reduced limits</h3>
 <ul>
-    <li>people limited by tools
+    <li>"people limited by tools" issue
     <li>many fields covered
     <li>no borders between remote sensing and vector network analysis
 </ul>
@@ -434,37 +485,38 @@ gs.run_command('r.fill.dir', input='elev',
 
 
 <section>
-<h3>QGIS Processing plugin</h3>
+<h3>QGIS Processing Plugin</h3>
 
 <ul>
     <li>access to most of GRASS GIS modules
     <li>unified interface to GDAL, SAGA, OTB, ...
     <li>Python interface as well
 </ul>
+<img src="img/qgis_processing.png" class="stretch">
 </section>
 
 
 <section>
-<h3>QGIS GRASS plugin</h3>
+<h3>QGIS GRASS Plugin</h3>
 
 <ul>
     <li>access to almost all of GRASS GIS modules
     <li>seamless integration with GRASS GIS native database
     <li>includes also CLI (GRASS shell)
 </ul>
-
+<img src="img/qgis_grass.png" class="stretch">
 </section>
 
 
 <section data-years="1994 2017">
-<h3>Web</h3>
+<h3>GRASS GIS in Cloud</h3>
 
 <ul>
     <li>GRASSLinks: A WWW interface to GIS (1994-1998)
     <li>Secure Shell (since 1995)
         <ul>
             <li>client-server
-            <li>HPC
+            <li>HPC clusters
         </ul>
     <li>...
     <li>ESA PROBA-V Mission Exploitation Platform
@@ -476,15 +528,13 @@ gs.run_command('r.fill.dir', input='elev',
 
 <section data-years="1987">
 <h3>Command Line</h3>
-<p>
-    <img src="img/cmdline_grass_movide.png" class="stretch">
+<img src="img/cmdline_grass_movide.png" class="stretch">
 </section>
 
 
 <section data-years="2017">
 <h3>Command Line</h3>
-<p>
-    <img src="img/cmdline_tangible.png" class="stretch">
+<img src="img/cmdline_tangible.png" class="stretch">
 </section>
 
 
@@ -495,8 +545,8 @@ gs.run_command('r.fill.dir', input='elev',
 -->
 <h3>Tangible Landscape</h3>
 <p>
-Tangible user interface for GRASS GIS
-<img src="img/tanland_composit.png">
+a tangible user interface
+<img src="img/tangible_landscape.jpg">
 </section>
 
 
@@ -506,17 +556,20 @@ Tangible user interface for GRASS GIS
 
 
 <section data-years="2013">
-<h3>Temporal algebra</h3>
+<h3>Temporal Algebra</h3>
 <ul>
-    <li>temporal relations, temporal buffer, spatio-temporal operators
+    <li>temporal buffers, overlays, relations, operators
     <li>includes spatial 2D raster, 3D raster and vector algebra
+    <li>operates on time series
+        <span class="small">(e.g. of climate data)</span>
     <li>prototype available in 2013, full version in 7.2
 </ul>
 <pre>D = if(start_date(A) &lt; "2005-01-01", A &amp; B)
 </pre>
+<img src="img/temporal_htc.png" class="stretch">
 <p class="small">
-    Spatially intersect (&amp;) features for each time step in A and B
-    after Jan 1, 2005
+    Hydro-thermal coefficients for 2003 and 2007 for Germany
+</p>
 </section>
 
 
@@ -532,7 +585,7 @@ Tangible user interface for GRASS GIS
 
 
 <section data-years="2016">
-<h3>Default color table</h3>
+<h3>Default Color Table</h3>
 <p>
     Perceptually uniform &mdash; viridis
 <p class="small">
@@ -585,21 +638,16 @@ Tangible user interface for GRASS GIS
 <section>
 <h3>Resources</h3>
 
-See the full list of
-<a href="https://grass.osgeo.org/grass72/manuals/graphical_index.html">core modules</a>
-and official
-<a href="https://grass.osgeo.org/grass72/manuals/addons">addon modules</a>.
-
 <ul>
+    <li>
+        Full list of
+        <a href="https://grass.osgeo.org/grass72/manuals/graphical_index.html">core modules</a>
+        and official
+        <a href="https://grass.osgeo.org/grass72/manuals/addons">addon modules</a>
     <li>
         <a href="http://ncsu-geoforall-lab.github.io/grass-intro-workshop/">Introduction to GRASS GIS</a>
     <li>
         <a href="https://github.com/wenzeslaus/python-grass-addon">How to write a Python GRASS GIS 7 addon</a>
-        <br>also available as a
-        <a href="https://www.youtube.com/watch?v=PX2UpMhp2hc">YouTube video</a>
-    <li>
-        <a href="https://grasswiki.osgeo.org/wiki/Using_GRASS_GIS_through_Python_and_tangible_interfaces_(workshop_at_FOSS4G_NA_2016)">
-        Using GRASS GIS through Python and tangible interfaces</a>
     <li>
         <a href="http://ncsu-geoforall-lab.github.io/grass-temporal-workshop/">
         Spatio-temporal data handling and visualization</a>

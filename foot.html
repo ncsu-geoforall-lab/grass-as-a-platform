@@ -128,8 +128,8 @@
                 }
                 var years = $(event.currentSlide).data('years')
                 if (years) {
-                    var min_year = 1980
-                    var max_year = 2022
+                    var min_year = 1981
+                    var max_year = 2021
                     var all_years = String(years).split(" ")
                     var num_years = all_years.length;
                     var svg_lines = ['<svg  class="timeline"  id="line"\
@@ -139,14 +139,14 @@ version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/
                     for (var i = 0; i < num_years; i++) {
                         year = all_years[i];
                         x = (year - min_year) / (max_year - min_year) * 100
-                        x_text = x + 0.5
+                        x_text = x + 0.1
                         text = year
                         line = '<circle\
        style="fill:#ffffff;stroke:#ff7f00;stroke-width:10;"\
        cx="' + x + '%"\
        cy="60"\
        r="20" />\
-       <text x="' + x_text + '%" y="35" fill="#ff7f00" font-size="40" font-family="sans-serif" font-weight="bold">' + text + '</text>'
+       <text x="' + x_text + '%" y="32" fill="#ff7f00" font-size="40" font-family="sans-serif" font-weight="bold">' + text + '</text>'
                         svg_lines.push(line)
                     }
                     //$("#line").html('<circle       style="fill:#ffffff;stroke:#ff7f00;stroke-width:5;"       cx="400"       cy="85"       r="10" />')

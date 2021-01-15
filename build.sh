@@ -17,3 +17,5 @@
 
 # make this presentation primary for convenience
 cp build/ncgis2017.html build/index.html
+
+touch build/.nojekyll
